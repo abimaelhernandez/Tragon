@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "loose": true,
+        "modules": false
+      }
+    ],
+    "react",
+    "stage-2"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    ["transform-class-properties", { "loose": true }]
+  ]
+}
