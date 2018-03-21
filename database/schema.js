@@ -14,7 +14,8 @@ const vendorSchema = mongoose.Schema({
     coordinates:[Number,Number]
   },
   Picture: String,
-  Expenses: Number
+  Expenses: Number,
+  Review: String
 })
 
 

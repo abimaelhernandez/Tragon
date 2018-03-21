@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
-//connection
+//connection to heroku
+const uri = process.env.MONGODB_URI:
 
+mongoose.Promise = global.Promise
 
-
-
-
-
+mongoose.connect(uri)
 /*up there pending connection to test db, here is
 to see if connection is or if there´s error´s
 */
 const db = mongoose.connection;
  db.on('error', console.error.bind(console, 'Connection error:'));
+   console.log('hey yo are here');
  db.once('open', function(){
   console.log('Mongodb coonection created!°°°°');
  });
