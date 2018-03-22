@@ -1,6 +1,6 @@
 var app = require('./config.js');
 
-var port = process.env.PORT || 3000;
+var port = (process.env.PORT || 3000);
 
 app.listen(port, function() {
   console.log(`Listening on Port ${port}!!!`);

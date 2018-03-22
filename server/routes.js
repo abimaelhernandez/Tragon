@@ -26,7 +26,6 @@ exports.getReviews = (req, res) => {
     res.status(200).json(review)
   })
 }
-console.log('400')
 
 //Query to database for the saved location´s
  exports.getLocations = (req, res) => {
