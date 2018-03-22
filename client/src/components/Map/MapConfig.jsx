@@ -26,7 +26,7 @@ const MyGoogleMap = compose(
    }
     componentDidMount(){
       this.delayedShowMarker()
-    }
+    } 
 
     delayedShowMarker = () => {
       setTimeout(()=>{
