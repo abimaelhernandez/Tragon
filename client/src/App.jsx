@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< 51268c9a9892cc80be4c2ec17b4f0c14fd4318ad
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 
 import HeaderBar from './components/home/HeaderBar.jsx';
@@ -18,6 +19,14 @@ const App = () => (
       </Switch>
       </main>
     </BrowserRouter>
+=======
+import AppBarMenue from './AppBar.jsx'
+
+const App = () => (
+  <div>
+      <AppBarMenue />
+    HELLO WORLD!
+>>>>>>> currently working on AppBarMenue
   </div>
 )
 

@@ -2,9 +2,13 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require('path');
 const route = require("./routes");
+<<<<<<< 51268c9a9892cc80be4c2ec17b4f0c14fd4318ad
 const mongoose = require('mongoose');
 
 const mongo = require('../database/config');
+=======
+//const db = require('../database/index');
+>>>>>>> currently working on AppBarMenue
 const app = express();
 
 //middleware
