@@ -22,6 +22,7 @@ class LocationMenu extends React.Component {
     return (
       <div className='Menu'>
         <Button
+          style={{ backgroundColor:'white', }}
           aria-owns={anchorEl ? 'fade-menu' : null}
           aria-haspopup="true"
           onClick={this.handleClick}
