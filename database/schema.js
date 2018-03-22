@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 
 
+mongoose.connect('mongodb://localhost/geospatial_db', function(err) {
+        if (err) throw err;
+
+        // do something...
+});
+
 const userSchema = mongoose.Schema({
   Name: String,
   Password: String
@@ -11,12 +17,16 @@ const vendorSchema = mongoose.Schema({
   category: String,
   location: {
     type:{type:String},
-    coordinates:[Number,Number]
+    coordinates:[Number,Number],
   },
   Picture: String,
   Expenses: Number,
-  Review: String
+  Review : [{
+    body: String,
+    ObjectId: String,
+    }] /// object rememeber
 })
+console.log('hey im listening ok ');
 
 
 const user = mongoose.model('user', userSchema);

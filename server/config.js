@@ -11,4 +11,15 @@ app.use(express.static(__dirname + "/../client/dist"));
 
 //HTTP Requests go here
 
+
+//make your profile
+app.post('/ProfilePage', route.createProfile);
+//post a review
+app.post('/reviews', route.postReview);
+//get reviews
+app.get('/userReviews', route.getReviews);
+//get Locations
+app.get('/location', route.getLocations);
+
+
 module.exports = app;
