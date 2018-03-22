@@ -17,7 +17,7 @@ const vendorSchema = mongoose.Schema({
   category: String,
   location: {
     type:{type:String},
-    coordinates:[Number,Number],
+    coordinates:[Number,Number]
   },
   Picture: String,
   Expenses: Number,
