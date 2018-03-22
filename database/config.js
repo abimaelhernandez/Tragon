@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const uri = process.env.MONGODB_URI:
 
 mongoose.Promise = global.Promise
-
+ mongoose.createConnection('mongodb://user:pass@localhost:port/database'
 mongoose.connect(uri)
 /*up there pending connection to test db, here is
 to see if connection is or if there´s error´s
