@@ -27,5 +27,4 @@ app.get('/location', route.getLocations);
 // get profile data
 app.get('/profile?:id', route.getProfile);
 
-
 module.exports = app;
