@@ -1,7 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const route = require("./routes");
-const db = require("../database/schema.js");
+const mongoose = require('mongoose');
+
+const mongo = require('../database/config');
 const app = express();
 
 //middleware

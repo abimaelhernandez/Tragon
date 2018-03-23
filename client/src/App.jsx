@@ -1,8 +1,9 @@
 import React from 'react';
+import Mongo from './MongoTest';
 
 const App = () => (
   <div>
-    HELLO WORLD!
+    <Mongo />
   </div>
 )
 
