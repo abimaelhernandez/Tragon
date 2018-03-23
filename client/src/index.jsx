@@ -2,15 +2,16 @@ import React from 'react';
 import {render} from 'react-dom';
 import App from './App';
 
-class App extends React.Component {
-  render(){
-    return(
-      <BrowserRouter>
-        <MuiThemeProvider>
-          <Route path="/" component={Primarylayout} />
-        </MuiThemeProvider>
-      </BrowserRouter>
-  )}
-};
+// class App extends React.Component {
+//   render(){
+//     return(
+//       <BrowserRouter>
+//         <MuiThemeProvider>
+//           <Route path="/" component={Primarylayout} />
+//         </MuiThemeProvider>
+//       </BrowserRouter>
+//   )}
+// };
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+
+render(<App/>, document.getElementById('app'));

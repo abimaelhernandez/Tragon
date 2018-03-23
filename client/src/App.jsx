@@ -1,9 +1,9 @@
 import React from 'react';
-import AppBarMenue from './AppBar.jsx'
+import HeaderBar from './components/home/HeaderBar.jsx'
 
 const App = () => (
   <div>
-      <AppBarMenue />
+    <HeaderBar />
     HELLO WORLD!
   </div>
 )
