@@ -20,9 +20,10 @@ const vendorSchema = mongoose.Schema({
     }] /// object rememeber
 })
 
-const user = mongoose.model('user', userSchema);
-const vendor = mongoose.model('vendor', vendorSchema);
+const User = mongoose.model('user', userSchema);
+const Vendor = mongoose.model('vendor', vendorSchema);
 
-
-module.exports = user;
-module.exports = vendor;
+module.exports = {
+  User,
+  Vendor
+}

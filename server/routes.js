@@ -1,11 +1,20 @@
-const db = require("../database/schema.js");
+const User = require("../database/schema.js");
+const Vendor = require("../database/schema.js");
+const mongoose = require('mongoose');
+const db = require('../database/config')
+
 const url = require('url');
 const path = require('path');
 
 //Query to post a profile
 exports.createProfile = (req, res) => {
-  user.create({
+  User.create({
     Name: req.body.Name
+  }, (err, user) => {
+        if (err) {
+          res.send(err);
+        }
+        res.json(user);
   })
 }
 
