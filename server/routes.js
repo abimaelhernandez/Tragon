@@ -1,11 +1,18 @@
-const db = require("../database/schema.js");
+const User = require("../database/schema.js").User;
+const Vendor = require("../database/schema.js").Vendor;
+
 const url = require('url');
 const path = require('path');
 
 //Query to post a profile
 exports.createProfile = (req, res) => {
-  user.create({
+  User.create({
     Name: req.body.Name
+  }, (err, user) => {
+        if (err) {
+          res.send(err);
+        }
+        res.json(user);
   })
 }
 
@@ -26,7 +33,6 @@ exports.getReviews = (req, res) => {
     res.status(200).json(review)
   })
 }
-console.log('routes seem fine wait to you TRY!!!')
 
 //Query to database for the saved location´s
  exports.getLocations = (req, res) => {
