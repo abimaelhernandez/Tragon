@@ -30,7 +30,7 @@ exports.getReviews = (req, res) => {
     if(err){
       throw(err)
     }
-    res.status(200).json(review)
+     res.status(200).json(review)
   })
 }
 
