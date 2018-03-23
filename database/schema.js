@@ -20,10 +20,5 @@ const vendorSchema = mongoose.Schema({
     }] /// object rememeber
 })
 
-const User = mongoose.model('user', userSchema);
-const Vendor = mongoose.model('vendor', vendorSchema);
-
-module.exports = {
-  User,
-  Vendor
-}
+exports.User = mongoose.model('user', userSchema);
+exports.Vendor = mongoose.model('vendor', vendorSchema);

@@ -1,7 +1,5 @@
-const User = require("../database/schema.js");
-const Vendor = require("../database/schema.js");
-const mongoose = require('mongoose');
-const db = require('../database/config')
+const User = require("../database/schema.js").User;
+const Vendor = require("../database/schema.js").Vendor;
 
 const url = require('url');
 const path = require('path');
