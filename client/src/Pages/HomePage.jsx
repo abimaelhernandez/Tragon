@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderBar from '../components/home/HeaderBar.jsx';
+import DrawerMenue from '../components/home/HeaderBar.jsx';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -10,7 +10,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-          <HeaderBar />
+          <DrawerMenue />
       </div>
     );
   }
