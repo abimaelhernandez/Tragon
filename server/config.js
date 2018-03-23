@@ -1,7 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const route = require("./routes");
-const db = require("../database/schema.js");
+const db = require("../database/config.js");
+const user = require("../database/schema.js")
 const app = express();
 
 //middleware
@@ -10,8 +11,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/../client/dist"));
 
 //HTTP Requests go here
-
-console.log('hey im here');
 
 //make your profile
 app.post('/ProfilePage', route.createProfile);
