@@ -1,4 +1,7 @@
 const mongoose = require('mongoose');
+
+//const MongoClient = require('mongodb').MongoClient;
+
 //connection to heroku
 //const uri = process.env.MONGODB_URI;
 
@@ -7,6 +10,8 @@ mongoose.Promise = global.Promise
 mongoose.connect('mongodb://127.0.0.1:27017/tragon')
 /*up there pending connection to test db, here is
 to see if connection is or if there´s error´s
+remember to run ... node "folderName tha houses configuration" + / + " filename where
+connection is been made"
 */
 const db = mongoose.connection;
 
