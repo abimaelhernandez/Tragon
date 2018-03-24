@@ -1,17 +1,28 @@
 import React from 'react';
-import DrawerMenue from '../components/home/HeaderBar.jsx';
+import Select from 'react-select';
 
-export default class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+class App extends React.Component {
+  state = {
+    selectedOption: '',
   }
-
+  handleChange = (selectedOption) => {
+    this.setState({ selectedOption });
+    console.log(`Selected: ${selectedOption.label}`);
+  }
   render() {
+  	const { selectedOption } = this.state;
+  	const value = selectedOption && selectedOption.value;
+
     return (
-      <div>
-          <DrawerMenue />
-      </div>
+      <Select
+        name="form-field-name"
+        value={value}
+        onChange={this.handleChange}
+        options={[
+          { value: 'one', label: 'One' },
+          { value: 'two', label: 'Two' },
+        ]}
+      />
     );
   }
 }
