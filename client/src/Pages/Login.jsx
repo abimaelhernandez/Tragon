@@ -44,7 +44,10 @@ export default class Mongo extends Component {
         <button onClick={this.submitUser}>
           Add User
         </button>
+
       </div>
+
+
     )
   }
 }
