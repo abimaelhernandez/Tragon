@@ -1,28 +1,32 @@
 import React from 'react';
 import Select from 'react-select';
 
-class App extends React.Component {
+import Searchbar from '../components/home/SearchBar.jsx';
+import LocationMenu from '../components/home/DropDown.jsx';
+
+export default class Home extends React.Component {
   state = {
     selectedOption: '',
   }
+
   handleChange = (selectedOption) => {
     this.setState({ selectedOption });
     console.log(`Selected: ${selectedOption.label}`);
   }
+
   render() {
   	const { selectedOption } = this.state;
   	const value = selectedOption && selectedOption.value;
 
     return (
-      <Select
-        name="form-field-name"
-        value={value}
-        onChange={this.handleChange}
-        options={[
-          { value: 'one', label: 'One' },
-          { value: 'two', label: 'Two' },
-        ]}
-      />
+      <div>
+        <div>
+          <Searchbar />
+          </div>
+          <div>
+          <LocationMenu />
+        </div>
+      </div>
     );
   }
 }
