@@ -16,8 +16,12 @@
 
     function checkLoginState() { FB.getLoginStatus(function(response) { statusChangeCallback(response); }); }
     <script type="text/javascript" src='bundle.js'></script>
-    https://tragon-8e6ce.firebaseapp.com/__/auth/handler
     <script>
+      function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
+      }
       window.fbAsyncInit = function() {
         FB.init({
           appId: '163273487712660',
