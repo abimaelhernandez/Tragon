@@ -1,6 +1,6 @@
 import React from 'react';
 import Mongo from './MongoTest';
-
+//https://tragon-8e6ce.firebaseapp.com/__/auth/handler
 const App = () => (
   <div>
     <Mongo />
