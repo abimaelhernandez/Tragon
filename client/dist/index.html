@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Tragón!</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
   </head>
@@ -13,8 +14,6 @@
 
     <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
     </fb:login-button>
-
-    function checkLoginState() { FB.getLoginStatus(function(response) { statusChangeCallback(response); }); }
     <script type="text/javascript" src='bundle.js'></script>
     <script>
       function checkLoginState() {

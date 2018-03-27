@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-const Search = () => (
+const Searchbar = () => (
   <form className='SearchBar'>
     <input
       className='field'
@@ -12,4 +11,4 @@ const Search = () => (
 </form>
 )
 
-export default Search;
+export default Searchbar;
