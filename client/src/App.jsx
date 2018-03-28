@@ -1,21 +1,23 @@
 import React from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
 import HeaderBar from './components/home/HeaderBar.jsx';
-import Search from './components/home/Search.jsx';
-import LocationMenu from './components/home/DropDown.jsx';
+import Home from './Pages/HomePage.jsx';
+import Profile from './Pages/Profile.jsx';
+//import HeaderBar from './components/home/HeaderBar.jsx';
 
 const App = () => (
   <div>
-    <div>
-      <div>
-        <HeaderBar />
-          </div>
-              <div>
-                <Search />
-              </div>
-              <div>
-              <LocationMenu />
-              </div>
-          </div>
+    <BrowserRouter>
+      <main>
+      <HeaderBar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path={`/search/:query`} render={(props) => <Results {...props}/> } />
+        <Route exact path={`/user/:id`} render={(props) => <Profile {...props}/> } />
+      </Switch>
+      </main>
+    </BrowserRouter>
   </div>
 )
 
