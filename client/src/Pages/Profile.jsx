@@ -1,4 +1,5 @@
 import React from 'react';
+import MyGoogleMap from '../components/Map/MapConfig.jsx';
 
 import axios from 'axios';
 
@@ -7,7 +8,7 @@ import CardExampleWithAvatar from '../components/profile/AvatarVender.jsx';
 
 export default class PersonList extends React.Component {
   state = {
-    persons: data.data;
+    persons: data.data
   }
 
 
@@ -22,11 +23,15 @@ export default class PersonList extends React.Component {
 
 
 
+///import import React, {Component} from 'react'
+
+
   render() {
     return (
 
       <ul>
         <AvatarVender vendors={this.state.persons} />
+          <MyGoogleMap />
       </ul>
     )
   }
