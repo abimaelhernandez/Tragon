@@ -24,4 +24,7 @@ app.get('/userReviews', route.getReviews);
 //get Locations
 app.get('/location', route.getLocations);
 
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname + '/../client/dist/index.html'));
+})
 module.exports = app;
