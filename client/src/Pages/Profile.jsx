@@ -28,11 +28,12 @@ export default class PersonList extends React.Component {
 
   render() {
     return (
-
+    <div>
       <ul>
         <AvatarVender vendors={this.state.persons} />
           <MyGoogleMap />
       </ul>
+    </div>
     )
   }
 }
