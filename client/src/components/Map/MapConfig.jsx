@@ -17,7 +17,7 @@ const MyGoogleMap = compose(
     defaultZoom = {8}
     defaultCenter={{ lat:19.397925, lng:-99.171663}}
   >
-    {props.isMarkerShown && <Marker position={{ lat:19.397925, lng:-99.171663 }} />}
+     {props.isMarkerShown && <Marker position={{ lat:19.397925, lng:-99.171663 }} />}
   </GoogleMap>
 )
 
