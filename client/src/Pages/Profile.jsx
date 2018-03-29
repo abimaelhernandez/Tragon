@@ -1,28 +1,33 @@
 import React from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/Button';
 
-const CardExampleWithAvatar = () => (
-  <Card>
-    <CardHeader
-      title="URL Avatar"
-      subtitle="Subtitle"
-      avatar=""
-    />
-    <CardMedia
-      overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
-    >
-      <img src="images/nature-600-337.jpg" alt="" />
-    </CardMedia>
-    <CardTitle title="Card title" subtitle="Card subtitle" />
-    <CardText>
-      Showing the vender info here
-    </CardText>
-    <CardActions>
-      <FlatButton label="Action1" />
-      <FlatButton label="Action2" />
-    </CardActions>
-  </Card>
-);
+import axios from 'axios';
 
-export default CardExampleWithAvatar;
+import CardExampleWithAvatar from '../components/profile/AvatarVender.jsx';
+
+
+export default class PersonList extends React.Component {
+  state = {
+    persons: data.data;
+  }
+
+
+
+  componentDidMount() {
+    axios.get(`/profile`)
+      .then(res => {
+        const persons = res.data;
+        this.setState({ persons });
+      })
+  }
+
+
+
+  render() {
+    return (
+
+      <ul>
+        <AvatarVender vendors={this.state.persons} />
+      </ul>
+    )
+  }
+}

@@ -12,8 +12,8 @@ const App = () => (
       <main>
       <HeaderBar />
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path={`/search/:query`} render={(props) => <Results {...props}/> } />
+        <Route path="/" component={Home} />
+        <Route path={`/search/:query`} render={(props) => <Results {...props}/> } />
         <Route exact path={`/user/:id`} render={(props) => <Profile {...props}/> } />
       </Switch>
       </main>
