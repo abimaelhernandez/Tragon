@@ -12,9 +12,9 @@ const App = () => (
       <main>
       <HeaderBar />
       <Switch>
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route path={`/search/:query`} render={(props) => <Results {...props}/> } />
-        <Route exact path={`/user/:id`} render={(props) => <Profile {...props}/> } />
+        <Route path={`/user/:id`} render={(props) => <Profile {...props}/> } />
       </Switch>
       </main>
     </BrowserRouter>
