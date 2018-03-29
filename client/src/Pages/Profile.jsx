@@ -1,11 +1,50 @@
-import React, {Component} from 'react'
+import React from 'react';
 import MyGoogleMap from '../components/Map/MapConfig.jsx';
 
-const Profile = () => (
+import axios from 'axios';
 
-  <div>
-    <MyGoogleMap />
-  </div>
-)
+import CardExampleWithAvatar from '../components/profile/AvatarVender.jsx';
 
-export default Profile;
+
+export default class PersonList extends React.Component {
+  state = {
+    persons: data.data
+  }
+
+
+
+  componentDidMount() {
+    axios.get(`/profile`)
+      .then(res => {
+        const persons = res.data;
+        this.setState({ persons });
+      })
+  }
+
+
+
+///import import React, {Component} from 'react'
+
+
+  render() {
+    return (
+
+      <ul>
+        <AvatarVender vendors={this.state.persons} />
+          <MyGoogleMap />
+      </ul>
+    )
+  }
+}
+ ///mine
+ // import React, {Component} from 'react'
+ // import MyGoogleMap from '../components/Map/MapConfig.jsx';
+ //
+ // const Profile = () => (
+ //
+ //   <div>
+ //     <MyGoogleMap />
+ //   </div>
+ // )
+ //
+ // export default Profile;
