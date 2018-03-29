@@ -27,4 +27,7 @@ app.get('/location', route.getLocations);
 // get profile data
 app.get('/profile?:id', route.getProfile);
 
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname + '/../client/dist/index.html'));
+})
 module.exports = app;
