@@ -15,7 +15,6 @@ const App = () => (
         <Route exact path='/' component={Home} />
         <Route path={`/search/:query`} render={(props) => <Results {...props}/> } />
         <Route path={`/user/:id`} render={(props) => <Profile {...props}/> } />
-        <Redirect to='/' />
       </Switch>
       </main>
     </BrowserRouter>

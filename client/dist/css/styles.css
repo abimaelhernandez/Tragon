@@ -20,6 +20,11 @@ html {
   left: 200px;
 }
 
+.searchButton {
+  position: absolute;
+  top: 243px;
+  left: 735px;
+}
 
 .Menu {
   position: absolute;
