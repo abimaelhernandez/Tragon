@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 
 import HeaderBar from './components/home/HeaderBar.jsx';
 import Home from './Pages/HomePage.jsx';
@@ -12,9 +12,10 @@ const App = () => (
       <main>
       <HeaderBar />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path='/' component={Home} />
         <Route path={`/search/:query`} render={(props) => <Results {...props}/> } />
         <Route path={`/user/:id`} render={(props) => <Profile {...props}/> } />
+        <Redirect to='/' />
       </Switch>
       </main>
     </BrowserRouter>

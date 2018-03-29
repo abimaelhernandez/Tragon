@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require('path');
 const route = require("./routes");
 const mongoose = require('mongoose');
 
@@ -12,7 +13,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/../client/dist"));
 
 //HTTP Requests go here
-
+//catch-all
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, "/../client/dist/index.html"), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
 
 //make your profile
 app.post('/ProfilePage', route.createProfile);
