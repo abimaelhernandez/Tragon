@@ -6,7 +6,7 @@ import axios from 'axios';
 import CardExampleWithAvatar from '../components/profile/AvatarVender.jsx';
 
 
-export default class Profile extends React.Component {
+ class Profile extends React.Component {
   state = {
     persons: data.data
   }
@@ -30,13 +30,16 @@ export default class Profile extends React.Component {
     return (
       <div>
       <ul>
-        <AvatarVender vendors={this.state.persons} />
+        <AvatarVender vendors={this.state.user} />
       </ul>
-        <MyGoogleMap/>
-      </div>
+    <div>
+      <MyGoogleMap/>
+    </div>
+  </div>
     )
   }
 }
+export default Profile;
  ///mine
  // import React, {Component} from 'react'
  // import MyGoogleMap from '../components/Map/MapConfig.jsx';

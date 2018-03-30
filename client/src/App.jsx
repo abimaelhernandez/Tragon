@@ -15,7 +15,7 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path={`/search/:query`} render={(props) => <Results {...props}/> } />
-        <Route path={`/user/:id`} render={(props) => <Profile {...props}/> } />
+        <Route path={`/user`} render={(props) => <Profile {...props}/> } />
         <Route path={`/map`} render={(props)=> <MyGoogleMap {...props}/> } />
     </Switch>
       </main>

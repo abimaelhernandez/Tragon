@@ -7,8 +7,8 @@ import {withScriptjs, withGoogleMap, GoogleMap, Marker} from "react-google-maps"
   withProps({
     googleMapURL:"https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
     loadingElement: <div style={{height: `100%`}} />,
-  containerElement:<div style={{height: `999px`}}/>,
-    mapElement:<div style={{height:`100%`}}/>,
+  containerElement:<div style={{height: `1000px`}}/>,
+mapElement:<div style={{height:`100%`}}/>,
   }),
   withScriptjs,
   withGoogleMap
@@ -23,7 +23,7 @@ import {withScriptjs, withGoogleMap, GoogleMap, Marker} from "react-google-maps"
 
   class MyFancyComponent extends React.Component{
    state = {
-     isMarkerShown: false,
+     isMarkerShown: true,
    }
     componentDidMount(){
       this.delayedShowMarker()
@@ -39,6 +39,8 @@ import {withScriptjs, withGoogleMap, GoogleMap, Marker} from "react-google-maps"
       this.setState({isMarkerShown: false })
       this.delayedShowMarker()
     }
+
+
 
     render(){
       return (

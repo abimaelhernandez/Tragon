@@ -22,5 +22,6 @@ import Toolbar from 'material-ui/Toolbar';
   export default HeaderBar;
 ///mmine
 // <Link to="/"><Button id='tabButtonHome' color="inherit">Home</Button></Link>
-// <Link to={`/user/:id`}><Button id='profilePage' label="profile" color="inherit">Profile</Button></Link>
+ //
+   //<Link to={`/user/:id`}><Button id='profilePage' label="profile" color="inherit">Profile</Button></Link>
 // =======
