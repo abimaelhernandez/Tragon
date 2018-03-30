@@ -36,11 +36,7 @@ export default class Home extends React.Component {
     return (
       <div>
         <div>
-<<<<<<< 79cd892d2b5bf481552cf6139e102c57e1736e89
           <Searchbar submitSearch={this.submitSearch}/>
-=======
-          <SearchBar />
->>>>>>> currently working on Auto complete in SearchBar component
           </div>
           <div>
           <LocationMenu />
