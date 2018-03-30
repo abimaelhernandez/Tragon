@@ -8,12 +8,15 @@ export default class Searchbar extends Component {
 
   updateSearch = (event) => {
     this.setState({
-
+      search: event.target.value
     })
   }
 
   newSearch = () => {
-
+    this.props.submitSearch(this.state.search);
+    this.setState({
+      search: ''
+    })
   }
 
   render() {
@@ -28,7 +31,11 @@ export default class Searchbar extends Component {
           value={this.state.search}
           />
       </form>
-      <Button className="searchButton" variant="raised" color="primary">
+      <Button
+        className="searchButton"
+        variant="raised"
+        color="primary"
+        onClick={this.newSearch}>
         Search
       </Button>
     </div>

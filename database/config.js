@@ -13,7 +13,7 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Connection error:'));
 
 db.once('open', function(){
-  console.log('Mongodb coonection created!');
+  console.log('Mongodb connection created!');
 });
 
 module.exports = db;

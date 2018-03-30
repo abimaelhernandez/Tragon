@@ -20,8 +20,5 @@ const vendorSchema = mongoose.Schema({
     }]
 })
 
-exports.User = mongoose.model('user', userSchema);
-exports.Vendor = mongoose.model('vendor', vendorSchema);
-//=== tragon Config Vars
-//MONGODB_URI: mongodb://heroku_f2zv1xhd:adnlio6rd3b86vbsnprh2fg3j0@ds121099.mlab.com:21099/heroku_f2zv1xhd
-//mongoimport -h ds121099.mlab.com:21099 -d heroku_f2zv1xhd -c users -u heroku_f2zv1xhd -p adnlio6rd3b86vbsnprh2fg3j0 --file users.json
+exports.Users = mongoose.model('user', userSchema);
+exports.Vendors = mongoose.model('vendor', vendorSchema);

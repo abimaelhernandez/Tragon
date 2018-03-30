@@ -16,7 +16,17 @@ export default class Home extends React.Component {
   }
 
   submitSearch = (query) => {
-    axios.get()
+    axios.get('/search', {
+      params: {
+        query: `${query}`
+      }
+    })
+    .then((data) => {
+      console.log(data)
+    })
+    .catch((error) => {
+      console.error(error);
+    })
   }
 
   render() {
@@ -26,7 +36,7 @@ export default class Home extends React.Component {
     return (
       <div>
         <div>
-          <Searchbar />
+          <Searchbar submitSearch={this.submitSearch}/>
           </div>
           <div>
           <LocationMenu />
