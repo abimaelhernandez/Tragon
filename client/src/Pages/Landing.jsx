@@ -35,9 +35,9 @@ export default class Landing extends React.Component {
         vendors: vendors,
         fireRedirect: true
       })
-      this.state.fireRedirect && (
-        <Redirect to={"/search"} />
-      )
+      if (this.state.fireRedirect) {
+        (<Redirect to={"/search"} />)
+      }
     })
     .catch((error) => {
       console.error(error);
@@ -47,7 +47,7 @@ export default class Landing extends React.Component {
   render() {
     const { selectedOption } = this.state;
     const value = selectedOption && selectedOption.value;
-    const {fireRedirect} = this.state.fireRedirect
+
     return (
       <div>
         <div id="primary-content">
