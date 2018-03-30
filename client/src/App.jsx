@@ -6,6 +6,7 @@ import Home from './Pages/HomePage.jsx';
 import Results from './Pages/Results.jsx';
 import Profile from './Pages/Profile.jsx';
 
+
 const App = () => (
   <div>
     <BrowserRouter>
