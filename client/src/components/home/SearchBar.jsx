@@ -27,7 +27,7 @@ export default class Searchbar extends Component {
         <form className="SearchBar">
         <input
           onChange={this.updateSearch}
-          className='field'
+          className='FieldInput'
           type="text"
           placeholder="Que se te antoja, paisa?"
           value={this.state.search}
@@ -35,7 +35,7 @@ export default class Searchbar extends Component {
       </form>
       <Button
         type="submit"
-        className="searchButton"
+        className="SearchButton"
         variant="raised"
         color="primary"
         onClick={this.newSearch}>

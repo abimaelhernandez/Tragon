@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-
+import Search from '../components/home/Search.jsx';
 import Searchbar from '../components/home/SearchBar.jsx';
 import LocationMenu from '../components/home/DropDown.jsx';
 
