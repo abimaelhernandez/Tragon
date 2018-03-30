@@ -23,7 +23,7 @@ export default class Searchbar extends Component {
 
     return (
       <div>
-        <form className='SearchBar'>
+        <form className="SearchBar">
         <input
           onChange={this.updateSearch}
           className='FieldInput'
