@@ -1,5 +1,5 @@
 html {
-  background-image: url('../merced_food.jpg');
+  background-image: url('./merced_food.jpg');
     position: center center fixed;
    -webkit-background-size: cover;
    -moz-background-size: cover;
@@ -15,24 +15,25 @@ html {
 }
 
 .SearchBar {
-  position: absolute;
+  position: relative;
   top: 250px;
   left: 200px;
 }
 
-.searchButton {
-  position: absolute;
-  top: 242px;
-  left: 710px;
-}
 
 .Menu {
-  position: absolute;
-  top: 245px;
-  left: 850px;
+  position: relative;
+  top: 181.3px;
+  left: 835px;
 }
 
-.field {
-  width: 500px;
+.FieldInput {
+  width: 520px;
   height: 25px;
+}
+
+.SearchButton {
+  position: relative;
+  top: 216.5px;
+  left: 725px;
 }
