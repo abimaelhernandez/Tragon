@@ -3,7 +3,7 @@ const Vendor = require("../database/schema.js").Vendor;
 
 const url = require('url');
 const path = require('path');
-
+const data = require('../database/dummyData.js').data;
 //Query to post a profile
 exports.createProfile = (req, res) => {
   User.create({
@@ -43,3 +43,8 @@ exports.getReviews = (req, res) => {
      res(location);
    })
  }
+
+//Query to profile for data look up
+exports.getProfile = (req, res) => {
+  res.send(data);
+}

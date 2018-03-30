@@ -7,10 +7,10 @@ import CardExampleWithAvatar from '../components/profile/AvatarVender.jsx';
 
 export default class PersonList extends React.Component {
   state = {
-    persons: data.data;
+    persons: []
   }
 
-
+//
 
   componentDidMount() {
     axios.get(`/profile`)
@@ -20,14 +20,16 @@ export default class PersonList extends React.Component {
       })
   }
 
-
+//
 
   render() {
     return (
-
-      <ul>
-        <AvatarVender vendors={this.state.persons} />
-      </ul>
+      <div>
+        {console.log(this.state.persons)}
+        <ul>
+          <AvatarVender vendors={this.state.persons} />
+        </ul>
+      </div>
     )
   }
 }

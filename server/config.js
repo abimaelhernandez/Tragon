@@ -22,6 +22,7 @@ app.post('/reviews', route.postReview);
 app.get('/userReviews', route.getReviews);
 //get Locations
 app.get('/location', route.getLocations);
-// 
+// get profile data
+app.get('/profile', route.getProfile);
 
 module.exports = app;
