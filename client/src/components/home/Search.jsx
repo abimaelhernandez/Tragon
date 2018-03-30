@@ -1,3 +1,4 @@
+<<<<<<< 2b96bedafc29eccc7c48c745cbce86bdfb529f92
 // import React from 'react';
 // import Autosuggest from 'react-autosuggest';
 //
@@ -81,3 +82,20 @@
 // }
 //
 // export default Search;
+=======
+import React from 'react';
+
+
+const Search = () => (
+  <form className='SearchBar'>
+    <input
+      className='field'
+      type="text"
+      placeholder="Que se te antoja, paisa?"
+      value={''}
+    />
+</form>
+)
+
+export default Search;
+>>>>>>> rebased
