@@ -4,7 +4,7 @@ import FlatButton from 'material-ui/Button';
 
 
 
-const CardExampleWithAvatar = () => (
+const CardExampleWithAvatar = (props) => (
   <Card>
     <CardHeader
       title="URL Avatar"
@@ -14,7 +14,7 @@ const CardExampleWithAvatar = () => (
     <CardMedia
       overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
     >
-      <img src="" alt="" />
+      <img src={`${this.props.picture}`} alt="" />
     </CardMedia>
     <CardTitle title="Card title" subtitle="Card subtitle" />
     <CardText>

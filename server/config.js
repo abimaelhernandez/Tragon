@@ -25,6 +25,7 @@ app.get('/userReviews', route.getReviews);
 //get Locations
 app.get('/location', route.getLocations);
 // get profile data
-app.get('/profile', route.getProfile);
+app.get('/profile?:id', route.getProfile);
+
 
 module.exports = app;

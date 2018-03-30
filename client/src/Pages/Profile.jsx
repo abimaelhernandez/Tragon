@@ -5,27 +5,34 @@ import CardExampleWithAvatar from '../components/profile/AvatarVender.jsx';
 
 export default class Profile extends React.Component {
   state = {
-    persons: []
+    person: []
   }
 
-//
-
-  componentDidMount() {
-    axios.get(`/profile`)
+  componentDidMount = () => {
+    axios.get(`/profile`,{
+      params: {
+        id: '${id}'
+      }
+    })
       .then(res => {
-        const persons = res.data;
-        this.setState({ persons });
-      })
-  }
+        const person = res.data;
+        this.setState({ person });
 
-//
+      })
+      .catch ((error) => {
+        console.log(error)
+      })
+     }
+
+
+
 
   render() {
     return (
       <div>
-        {console.log(this.state.persons)}
+        {console.log(this.state.person)}
         <ul>
-          <AvatarVender vendors={this.state.persons} />
+          <CardExampleWithAvatar vendors={this.state.person} picture={this.state.person.picture} />
         </ul>
       </div>
     )
