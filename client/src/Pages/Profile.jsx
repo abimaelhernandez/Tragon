@@ -37,7 +37,6 @@ export default class Profile extends React.Component {
     )
   }
 }
-export default Profile;
  ///mine
  // import React, {Component} from 'react'
  // import MyGoogleMap from '../components/Map/MapConfig.jsx';
