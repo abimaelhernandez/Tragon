@@ -4,7 +4,7 @@ import MyGoogleMap from '../components/Map/MapConfig.jsx';
 import CardExampleWithAvatar from '../components/profile/AvatarVender.jsx';
 
 
-export default class Profile extends React.Component {
+ class Profile extends React.Component {
   state = {
     person: []
   }

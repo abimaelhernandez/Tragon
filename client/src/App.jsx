@@ -13,6 +13,7 @@ const App = () => (
         <Switch>
           <Route path="/" component={HomeContainer} />
           <Route path={"/user/:id"} component={Profile} />
+            <Route path={`/map`} render={(props)=> <MyGoogleMap {...props}/> } />
         </Switch>
       </main>
     </BrowserRouter>
