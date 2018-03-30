@@ -20,6 +20,7 @@ export default class Searchbar extends Component {
   }
 
   render() {
+
     return (
       <div>
         <form className='SearchBar'>
@@ -32,6 +33,7 @@ export default class Searchbar extends Component {
           />
       </form>
       <Button
+        type="submit"
         className="searchButton"
         variant="raised"
         color="primary"
