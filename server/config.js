@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require('path');
 const route = require("./routes");
 const mongoose = require('mongoose');
 
@@ -13,8 +14,9 @@ app.use(express.static(__dirname + "/../client/dist"));
 
 //HTTP Requests go here
 
-
 //make your profile
+app.get('/search?:query', route.Search)
+
 app.post('/ProfilePage', route.createProfile);
 //post a review
 app.post('/reviews', route.postReview);

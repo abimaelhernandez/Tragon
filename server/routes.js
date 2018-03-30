@@ -1,9 +1,22 @@
-const User = require("../database/schema.js").User;
-const Vendor = require("../database/schema.js").Vendor;
+const Users = require("../database/schema.js").Users;
+const Vendors = require("../database/schema.js").Vendors;
 
 const url = require('url');
 const path = require('path');
-const data = require('../database/dummyData.js').data;
+
+//Search for vendors by category
+exports.Search = (req, res) => {
+  let query = req.query.query;
+
+  Vendors.find({category: query}).exec((err, vendors) => {
+    if (err) {
+      console.error(err)
+    } else {
+      res.json(vendors)
+    }
+  })
+}
+
 //Query to post a profile
 exports.createProfile = (req, res) => {
   User.create({

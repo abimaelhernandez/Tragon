@@ -1,11 +1,9 @@
 import React from 'react';
 
-import axios from 'axios';
-
 import CardExampleWithAvatar from '../components/profile/AvatarVender.jsx';
 
 
-export default class PersonList extends React.Component {
+export default class Profile extends React.Component {
   state = {
     persons: []
   }
