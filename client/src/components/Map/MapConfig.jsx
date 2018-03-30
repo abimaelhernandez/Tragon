@@ -22,7 +22,7 @@ const MyGoogleMap = compose(
 
   class MyFancyComponent extends React.Component{
    state = {
-     isMarkerShown: false,
+     isMarkerShown: true,
    }
     componentDidMount(){
       this.delayedShowMarker()
@@ -31,11 +31,11 @@ const MyGoogleMap = compose(
     delayedShowMarker = () => {
       setTimeout(()=>{
         this.setState({isMarkerShown: true })
-      }, 3000)
+      }, 1000)
     }
 
     handleMarker = () => {
-      this.setState({isMarkerShown: false })
+      this.setState({isMarkerShown: true })
       this.delayedShowMarker()
     }
 
