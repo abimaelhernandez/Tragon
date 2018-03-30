@@ -2,6 +2,7 @@ import React from "react"
 import ReactDOM from "react-dom"
 import {compose, withProps} from "recompose"
 import {withScriptjs, withGoogleMap, GoogleMap, Marker} from "react-google-maps"
+
 const MyGoogleMap = compose(
   withProps({
     googleMapURL:"https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
@@ -16,6 +17,12 @@ const MyGoogleMap = compose(
     defaultZoom = {8}
     defaultCenter={{ lat:19.397925, lng:-99.171663}}
   >
+  <Marker
+    position={{lat: 20.472025, lng: -97.000088}}
+    darggable={true}
+    clickable={true}
+
+    />
      {props.isMarkerShown && <Marker position={{ lat:19.397925, lng:-99.171663 }} />}
   </GoogleMap>
 )
@@ -35,7 +42,7 @@ const MyGoogleMap = compose(
     }
 
     handleMarker = () => {
-      this.setState({isMarkerShown: true })
+      this.setState({isMarkerShown: false })
       this.delayedShowMarker()
     }
 
