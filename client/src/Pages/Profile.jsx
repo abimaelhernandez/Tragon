@@ -1,12 +1,10 @@
 import React from 'react';
 import MyGoogleMap from '../components/Map/MapConfig.jsx';
 
-import axios from 'axios';
-
 import CardExampleWithAvatar from '../components/profile/AvatarVender.jsx';
 
 
- class Profile extends React.Component {
+export default class Profile extends React.Component {
   state = {
     persons: data.data
   }

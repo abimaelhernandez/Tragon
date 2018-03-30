@@ -7,11 +7,26 @@ import LocationMenu from '../components/home/DropDown.jsx';
 export default class Home extends React.Component {
   state = {
     selectedOption: '',
+    query: ''
   }
 
   handleChange = (selectedOption) => {
     this.setState({ selectedOption });
     console.log(`Selected: ${selectedOption.label}`);
+  }
+
+  submitSearch = (query) => {
+    axios.get('/search', {
+      params: {
+        query: `${query}`
+      }
+    })
+    .then((data) => {
+      console.log(data)
+    })
+    .catch((error) => {
+      console.error(error);
+    })
   }
 
   render() {
@@ -21,7 +36,7 @@ export default class Home extends React.Component {
     return (
       <div>
         <div>
-          <Searchbar />
+          <Searchbar submitSearch={this.submitSearch}/>
           </div>
           <div>
           <LocationMenu />
