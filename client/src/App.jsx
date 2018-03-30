@@ -6,6 +6,8 @@ import Landing from './Pages/Landing.jsx';
 import Results from './Pages/Results.jsx';
 import AddVendor from './Pages/AddVendor.jsx';
 import Profile from './Pages/Profile.jsx';
+import MyGoogleMap from './components/Map/MapConfig.jsx';
+//import HeaderBar from './components/home/HeaderBar.jsx';
 
 
 const App = () => (
