@@ -27,13 +27,9 @@ export default class Profile extends React.Component {
   render() {
     return (
       <div>
-      <div>
       <ul>
-        <MyGoogleMap/>
         <AvatarVender vendors={this.state.user} />
       </ul>
-
-    </div>
   </div>
     )
   }

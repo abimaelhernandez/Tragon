@@ -19,9 +19,7 @@ const MyGoogleMap = compose(
   >
   <Marker
     position={{lat: 20.472025, lng: -97.000088}}
-    darggable={true}
-    clickable={true}
-
+    draggable={true}
     />
      {props.isMarkerShown && <Marker position={{ lat:19.397925, lng:-99.171663 }} />}
   </GoogleMap>
