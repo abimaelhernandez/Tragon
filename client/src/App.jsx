@@ -1,9 +1,8 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import HeaderBar from './components/home/HeaderBar.jsx';
-import Landing from './Pages/Landing.jsx';
-
+import Home from './Pages/HomePage.jsx';
 import Profile from './Pages/Profile.jsx';
 
 const App = () => (
@@ -12,7 +11,7 @@ const App = () => (
       <main>
         <HeaderBar />
         <Switch>
-          <Route exact path="/" component={Landing} />
+          <Route exact path="/" component={Home} />
           <Route path={"/user/:id"} component={Profile} />
         </Switch>
       </main>

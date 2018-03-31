@@ -1,29 +1,57 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Select from 'react-select';
-import Search from '../components/home/Search.jsx';
+import {Switch, Route, Redirect} from 'react-router-dom';
+
+import Results from './Results.jsx';
 import Searchbar from '../components/home/SearchBar.jsx';
 import LocationMenu from '../components/home/DropDown.jsx';
 
-export default class Home extends React.Component {
+export default class Home extends Component {
   state = {
-    selectedOption: ''
+    selectedOption: '',
+    vendors: [],
+    query: ''
   }
 
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption });
-    console.log(`Selected: ${selectedOption.label}`);
+  componentDidMount() {
+
+  }
+
+  submitSearch = (query) => {
+    axios.get('/search', {
+      params: {
+        query: `${query}`
+      }
+    })
+    .then((data) => {
+      let vendors = data.data;
+      this.setState({
+        vendors: vendors,
+        query: `${query}`
+      })
+      console.log(this.state)
+    })
+    .catch((error) => {
+      console.error(error);
+    })
+  }
+
+  componentWillUnmount(){
+
   }
 
   render() {
     return (
       <div>
-        <div>
-          <Searchbar submitSearch={this.props.submitSearch}/>
-          </div>
-          <div>
+        <div id="primary-content">
+          <Searchbar submitSearch={this.submitSearch}/>
           <LocationMenu />
-        </div>
+        <Switch>
+          <Route path={`/search?query=${this.state.query}`}
+            render={(props) => <Results vendors={this.state.vendors} {...props}/> } />
+        </Switch>
       </div>
+    </div>
     );
   }
 }
