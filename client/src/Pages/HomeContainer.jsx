@@ -5,7 +5,7 @@ import {Switch, Route, withRouter} from 'react-router-dom';
 import Results from './Results.jsx';
 import Home from './HomePage.jsx'
 
-class HomeLayout extends Component {
+class HomeContainer extends Component {
   state = {
     selectedOption: '',
     vendors: []
@@ -44,4 +44,4 @@ class HomeLayout extends Component {
   }
 }
 
-export default withRouter(HomeLayout)
+export default withRouter(HomeContainer)

@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import HeaderBar from './components/home/HeaderBar.jsx';
-import HomeLayout from './Pages/HomeLayout.jsx';
+import HomeContainer from './Pages/HomeContainer.jsx';
 import Profile from './Pages/Profile.jsx';
 
 const App = () => (
@@ -10,7 +10,7 @@ const App = () => (
       <main>
         <HeaderBar />
         <Switch>
-          <Route path="/" component={HomeLayout} />
+          <Route path="/" component={HomeContainer} />
           <Route path={"/user/:id"} component={Profile} />
         </Switch>
       </main>
