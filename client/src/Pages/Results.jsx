@@ -14,9 +14,10 @@ export default class Results extends Component {
   render() {
     return (
       <div>
-        <div>
-          {console.log("Load Results")}
-          "Please show up"
+        <div className="center-content">
+          <center>
+          "MAP GOES HERE"
+          </center>
         </div>
       </div>
     )

@@ -12,6 +12,11 @@ html {
  min-height: 100%;
 }
 
+.center-content {
+  position: relative;
+  display: block;
+  line-height: normal;
+}
 
 .Log {
  position: absolute;

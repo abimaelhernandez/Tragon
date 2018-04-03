@@ -28,17 +28,16 @@ class HomeLayout extends Component {
     this.props.history.push(`/search?query=${query}`)
   }
 
-  shouldComponentUpdate(nextState) {
-    return nextState.vendors !== this.state.vendors
+  shouldComponentUpdate(nextProps) {
+    return nextProps.location !== this.props.location
   }
 
   render() {
     return (
       <div>
         <Switch>
-          <Route path="/" render={(props) => <Home submitSearch={this.submitSearch} /> } />
-          <Route path={`${this.props.location.pathname}${this.props.location.search}`}
-            render={(props) => <Results {...props}/> } />
+          <Route exact path="/" render={(props) => <Home submitSearch={this.submitSearch} /> } />
+          <Route render={(props) => <Results {...props} vendors={this.state.vendors} /> } />
         </Switch>
       </div>
     );

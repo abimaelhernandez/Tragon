@@ -9,9 +9,10 @@ const App = () => (
     <BrowserRouter>
       <main>
         <HeaderBar />
-
+        <Switch>
           <Route path="/" component={HomeLayout} />
-
+          <Route path={"/user/:id"} component={Profile} />
+        </Switch>
       </main>
     </BrowserRouter>
 )
