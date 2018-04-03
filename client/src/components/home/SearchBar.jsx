@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
 import Button from 'material-ui/Button';
 
-export default class Searchbar extends Component {
+export default class SearchBar extends Component {
   state = {
     search: ''
   }

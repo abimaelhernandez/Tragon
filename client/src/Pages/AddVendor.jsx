@@ -5,6 +5,6 @@ export default class AddVendor extends Component {
     name: '',
     tag: '',
     location: '',
-    
+
   }
 }
