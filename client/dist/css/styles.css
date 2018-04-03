@@ -12,6 +12,15 @@ html {
  min-height: 100%;
 }
 
+#main-content{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  top: 15vh;
+}
+
 .center-content {
   position: relative;
   display: block;
