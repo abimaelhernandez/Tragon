@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Results extends Component {
+export default class Results extends Component {
  state = {
    query: '',
  }
@@ -25,7 +25,6 @@ class Results extends Component {
      <form>
        <input
          placeholder="Search for..."
-         ref={input => this.search = input}
          onChange={this.handleInputChange}
        />
        <p>{this.state.query}</p>
@@ -33,5 +32,3 @@ class Results extends Component {
    )
  }
 }
-
-export default Search
