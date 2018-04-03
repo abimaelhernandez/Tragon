@@ -8,7 +8,6 @@ import Toolbar from 'material-ui/Toolbar';
 
   const HeaderBar = (props) => (
       <AppBar id='appBar'>
-
           <Toolbar>
             <Link to="/"><Button id='tabButtonHome' color="white">Home</Button></Link>
             <Link to="/user/:id"><Button id='AvatarVender' label="profile" color="white">Profile</Button></Link>

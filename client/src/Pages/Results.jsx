@@ -14,8 +14,10 @@ export default class Results extends Component {
   render() {
     return (
       <div>
-        {console.log(this.props)}
-        `HELLO YOU'VE REACHED THE RESULTS PAGE`
+        <div>
+          {console.log("Load Results")}
+          "Please show up"
+        </div>
       </div>
     )
   }

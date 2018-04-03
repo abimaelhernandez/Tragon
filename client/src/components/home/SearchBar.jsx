@@ -1,16 +1,11 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import Button from 'material-ui/Button';
 
-export default class Searchbar extends Component {
+export default class SearchBar extends Component {
   state = {
     search: ''
   }
 
-  componentDidMount() {
-
-  }
-  
   updateSearch = (event) => {
     this.setState({
       search: event.target.value
@@ -37,14 +32,14 @@ export default class Searchbar extends Component {
           value={this.state.search}
           />
       </form>
-      <Link to={`/search?query=${this.state.search}`}><Button
+      <Button
         type="submit"
         className="SearchButton"
         variant="raised"
         color="primary"
         onClick={this.newSearch}>
         Search
-      </Button></Link>
+      </Button>
     </div>
     )
   }

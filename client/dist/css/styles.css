@@ -1,38 +1,41 @@
 html {
   background-image: url('../merced_food.jpg');
-    position: center center fixed;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-   background-repeat: no-repeat;
+  height: auto;
+  width: 100%;
+  position: center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ background-repeat: no-repeat;
+ min-width: 1024px;
+ min-height: 100%;
 }
 
 
 .Log {
-   position: absolute;
-   left: 1100px;
+ position: absolute;
+ left: 1100px;
 }
 
 .SearchBar {
-  position: absolute;
-  top: 250px;
-  left: 200px;
-}
-
-.searchButton {
-  position: absolute;
-  top: 242px;
-  left: 710px;
+position: relative;
+top: 250px;
+left: 200px;
 }
 
 .Menu {
-  position: absolute;
-  top: 245px;
-  left: 850px;
+position: relative;
+top: 181.3px;
+left: 835px;
 }
 
-.field {
-  width: 500px;
-  height: 25px;
+.FieldInput {
+width: 520px;
+height: 25px;
 }
+
+.SearchButton {
+position: relative;
+top: 214px;
+left: 735px;
