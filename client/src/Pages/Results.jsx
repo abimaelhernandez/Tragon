@@ -1,25 +1,34 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react'
 
 export default class Results extends Component {
-  state = {
-    vendors: []
-  }
+ state = {
+   query: '',
+ }
 
-  componentDidMount() {
-    this.setState({
-      vendors: this.props.vendors
+ handleInputChange = () => {
+   this.setState({
+     query: this.search.value
+   })
+ }
+
+ getInfo = () => {
+  axios.get(`${API_URL}?api_key=${API_KEY}&prefix=${this.state.query}&limit=7`)
+    .then(({ data }) => {
+      this.setState({
+        results: data.data
+      })
     })
-  }
+}
 
-  render() {
-    return (
-      <div>
-        <div className="center-content">
-          <center>
-          "MAP GOES HERE"
-          </center>
-        </div>
-      </div>
-    )
-  }
+ render() {
+   return (
+     <form>
+       <input
+         placeholder="Search for..."
+         onChange={this.handleInputChange}
+       />
+       <p>{this.state.query}</p>
+     </form>
+   )
+ }
 }

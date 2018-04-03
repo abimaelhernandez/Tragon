@@ -5,6 +5,7 @@ import HeaderBar from './components/home/HeaderBar.jsx';
 import HomeContainer from './Pages/HomeContainer.jsx';
 import Profile from './Pages/Profile.jsx';
 
+
 const App = () => (
     <BrowserRouter>
       <main>
