@@ -26,7 +26,9 @@ app.post('/reviews', route.postReview);
 app.get('/userReviews', route.getReviews);
 //get Locations
 app.get('/location', route.getLocations);
-//catch all 
+// get profile data
+app.get('/profile?:id', route.getProfile);
+
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname + '/../client/dist/index.html'));
 })

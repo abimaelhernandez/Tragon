@@ -2,13 +2,12 @@ import React from "react"
 import ReactDOM from "react-dom"
 import {compose, withProps} from "recompose"
 import {withScriptjs, withGoogleMap, GoogleMap, Marker} from "react-google-maps"
-
 const MyGoogleMap = compose(
   withProps({
     googleMapURL:"https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
     loadingElement: <div style={{height: `100%`}} />,
-  containerElement:<div style={{height: `999px`}}/>,
-    mapElement:<div style={{height:`100%`}}/>,
+  containerElement:<div style={{height: `1000px`}}/>,
+mapElement:<div style={{height:`100%`}}/>,
   }),
   withScriptjs,
   withGoogleMap
@@ -36,7 +35,7 @@ const MyGoogleMap = compose(
     delayedShowMarker = () => {
       setTimeout(()=>{
         this.setState({isMarkerShown: true })
-      }, 1000)
+      }, 3000)
     }
 
     handleMarker = () => {

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-
+import AddUser from '../components/Login/AddUser.jsx'
 
 export default class Mongo extends Component {
   constructor(){

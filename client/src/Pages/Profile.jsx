@@ -4,20 +4,27 @@ import MyGoogleMap from '../components/Map/MapConfig.jsx';
 import CardExampleWithAvatar from '../components/profile/AvatarVender.jsx';
 
 
-export default class Profile extends React.Component {
+ class Profile extends React.Component {
   state = {
-    persons: data.data
+    person: []
   }
 
-
-
-  componentDidMount() {
-    axios.get(`/profile`)
+  componentDidMount = () => {
+    axios.get(`/profile`,{
+      params: {
+        id: '${id}'
+      }
+    })
       .then(res => {
-        const user = res.data;
-        this.setState({ persons });
+        const person = res.data;
+        this.setState({ person });
+
       })
-  }
+      .catch ((error) => {
+        console.log(error)
+      })
+     }
+
 
 
 
@@ -27,22 +34,11 @@ export default class Profile extends React.Component {
   render() {
     return (
       <div>
-      <ul>
-        <AvatarVender vendors={this.state.user} />
-      </ul>
-  </div>
+        {console.log(this.state.person)}
+        <ul>
+          <CardExampleWithAvatar vendors={this.state.person} picture={this.state.person.picture} />
+        </ul>
+      </div>
     )
   }
 }
- ///mine
- // import React, {Component} from 'react'
- // import MyGoogleMap from '../components/Map/MapConfig.jsx';
- //
- // const Profile = () => (
- //
- //   <div>
- //     <MyGoogleMap />
- //   </div>
- // )
- //
- // export default Profile;

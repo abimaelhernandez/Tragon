@@ -56,3 +56,16 @@ exports.getReviews = (req, res) => {
      res(location);
    })
  }
+
+//Query to profile for data look up
+exports.getProfile = (req, res) => {
+  let id = req.query.id;
+
+  Vendors.findOne({_id : id}).exec((err, vendor) => {
+    if (err) {
+      console.error(err)
+    } else {
+      res.json(vendor)
+    }
+  })
+}
