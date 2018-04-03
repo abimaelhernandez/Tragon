@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Tragón!</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
   </head>
 
   <body>
     <div id='app'></div>
-
-    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-    </fb:login-button>
     <script type="text/javascript" src='bundle.js'></script>
-    <script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsQMEFiz-SUk6rKzpZs9sJqKR0TN8_eyM&callback=initMap"></script>
+    <script async>
       function checkLoginState() {
         FB.getLoginStatus(function(response) {
           statusChangeCallback(response);

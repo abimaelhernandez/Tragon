@@ -1,5 +1,5 @@
 html {
-  background-image: url('../merced_food.jpg');
+  background-image: url('merced_food.jpg');
   height: auto;
   width: 100%;
   position: center center fixed;
@@ -10,6 +10,15 @@ html {
  background-repeat: no-repeat;
  min-width: 1024px;
  min-height: 100%;
+}
+
+#main-content{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  top: 15vh;
 }
 
 .center-content {
