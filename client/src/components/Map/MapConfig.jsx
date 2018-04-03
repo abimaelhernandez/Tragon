@@ -14,11 +14,11 @@ const MyGoogleMap = compose(
   withGoogleMap
 )((props) =>
   <GoogleMap
-    defaultZoom = {8}
+    defaultZoom = {12}
     defaultCenter={{ lat:19.397925, lng:-99.171663}}
   >
   <Marker
-    position={{lat: 20.472025, lng: -97.000088}}
+    position={{lat:19.418766,lng:  -99.103199}}
     draggable={true}
     />
      {props.isMarkerShown && <Marker position={{ lat:19.397925, lng:-99.171663 }} />}
