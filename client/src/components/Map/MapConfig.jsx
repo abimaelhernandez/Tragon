@@ -17,10 +17,7 @@ const MyGoogleMap = compose(
     defaultZoom = {11}
     defaultCenter={{ lat:19.397925, lng:-99.171663}}
   >
-  <Marker
-    position={{lat: 19.397925, lng: -99.103199}}
-    draggable={true}
-    />
+  <Marker position={{lat:19.397925, lng:-99.171663}} />
   </GoogleMap>
 )
 

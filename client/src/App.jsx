@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import HeaderBar from './components/home/HeaderBar.jsx';
 import HomeContainer from './Pages/HomeContainer.jsx';
 import Profile from './Pages/Profile.jsx';
+import AvatarVender from './components/profile/AvatarVender.jsx';
 import MyGoogleMap from './components/Map/MapConfig.jsx';
 
 const App = () => (
@@ -16,6 +17,7 @@ const App = () => (
         <Switch>
           <Route path="/" component={HomeContainer} />
           <Route path={"/user/:id"} component={Profile} />
+          <Route path={"/vendor"} component={AvatarVender} />
         </Switch>
         </main>
     </div>

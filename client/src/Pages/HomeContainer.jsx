@@ -18,6 +18,7 @@ class HomeContainer extends Component {
       }
     })
     .then(({data}) => {
+      console.log(data)
       this.setState({
         vendors: data
       })
@@ -32,12 +33,16 @@ class HomeContainer extends Component {
     return nextProps.location !== this.props.location
   }
 
+  componentWillUnmount() {
+
+  }
+
   render() {
     return (
       <div>
         <Switch>
           <Route exact path="/" render={(props) => <Home submitSearch={this.submitSearch} /> } />
-          <Route render={(props) => <Results {...props} vendors={this.state.vendors} /> } />
+          <Route path={`${this.props.location}`} render={(props) => <Results vendors={this.state.vendors} {...props} /> } />
         </Switch>
       </div>
     );

@@ -2,9 +2,7 @@ import React from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/Button';
 
-
-
-const CardExampleWithAvatar = (props) => (
+const AvatarVender = (props) => (
   <Card>
     <CardHeader
       title="URL Avatar"
@@ -27,4 +25,4 @@ const CardExampleWithAvatar = (props) => (
   </Card>
 );
 
-export default CardExampleWithAvatar;
+export default AvatarVender;

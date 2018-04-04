@@ -10,10 +10,7 @@ export default class Results extends Component {
    this.setState({
      vendors: this.props.vendors
    })
- }
-
- getInfo = () => {
-
+   console.log(this.props)
  }
 
  render() {

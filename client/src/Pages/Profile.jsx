@@ -10,6 +10,7 @@ export default class Profile extends React.Component {
   }
 
   componentDidMount = () => {
+    console.log('hello')
     axios.get(`/profile`,{
       params: {
         id: '${id}'
@@ -25,12 +26,6 @@ export default class Profile extends React.Component {
       })
      }
 
-
-
-
-///import import React, {Component} from 'react'
-
-
   render() {
     return (
       <div>
@@ -42,15 +37,3 @@ export default class Profile extends React.Component {
     )
   }
 }
- ///mine
- // import React, {Component} from 'react'
- // import MyGoogleMap from '../components/Map/MapConfig.jsx';
- //
- // const Profile = () => (
- //
- //   <div>
- //     <MyGoogleMap />
- //   </div>
- // )
- //
- // export default Profile;

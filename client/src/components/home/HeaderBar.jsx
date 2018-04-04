@@ -10,7 +10,8 @@ import Toolbar from 'material-ui/Toolbar';
       <AppBar id='appBar'>
           <Toolbar>
             <Link to="/"><Button id='tabButtonHome' color="white">Home</Button></Link>
-            <Link to="/profile"><Button id='AvatarVender' label="profile" color="white">Profile</Button></Link>
+            <Link to="/user/:id"><Button id='AvatarVender' label="profile" color="white">Profile</Button></Link>
+            <Link to="/vendor"><Button id='AvatarVender' label="profile" color="white">Profile</Button></Link>
             <div className='Log'><Button id='Login' label="Userlogin" color="inherit">Log in</Button></div>
           </Toolbar>
       </AppBar>
