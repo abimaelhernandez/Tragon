@@ -1,15 +1,13 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import AvatarVender from '../components/profile/AvatarVender.jsx';
 
-
-export default class Profile extends React.Component {
+export default class Profile extends Component {
   state = {
     person: []
   }
 
-  componentDidMount = () => {
-    console.log('hello')
+  componentDidMount() {
     axios.get(`/profile`,{
       params: {
         id: '${id}'
@@ -26,10 +24,11 @@ export default class Profile extends React.Component {
      }
 
   render() {
+    const {picture, name} = this.state.person
     return (
       <div>
         <ul>
-          <AvatarVender vendors={this.state.person} picture={this.state.person.picture} />
+          <AvatarVender name={name} picture={picture} />
         </ul>
       </div>
     )
