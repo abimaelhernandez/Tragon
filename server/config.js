@@ -13,9 +13,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/../client/dist"));
 
 //HTTP Requests go here
-
-console.log('hey im here');
-
 //make your profile
 app.get('/search?:query', route.Search)
 
