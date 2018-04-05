@@ -12,10 +12,6 @@ export default class Results extends Component {
    })
  }
 
- getInfo = () => {
-
- }
-
  render() {
    return (
      <div>

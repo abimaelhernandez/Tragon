@@ -1,7 +1,6 @@
 import React from 'react';
-import MyGoogleMap from '../components/Map/MapConfig.jsx';
 
-import CardExampleWithAvatar from '../components/profile/AvatarVender.jsx';
+import AvatarVender from '../components/profile/AvatarVender.jsx';
 
 
 export default class Profile extends React.Component {
@@ -10,6 +9,7 @@ export default class Profile extends React.Component {
   }
 
   componentDidMount = () => {
+    console.log('hello')
     axios.get(`/profile`,{
       params: {
         id: '${id}'
@@ -25,13 +25,11 @@ export default class Profile extends React.Component {
       })
      }
 
-
   render() {
     return (
       <div>
-        {console.log(this.state.person)}
         <ul>
-          <CardExampleWithAvatar vendors={this.state.person} picture={this.state.person.picture} />
+          <AvatarVender vendors={this.state.person} picture={this.state.person.picture} />
         </ul>
       </div>
     )
