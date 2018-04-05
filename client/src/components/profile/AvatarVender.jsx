@@ -3,8 +3,8 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import FlatButton from 'material-ui/Button';
 
 
-
-const CardExampleWithAvatar = (props) => (
+ const Vendor = (props) => (
+<div>
   <Card>
     <CardHeader
       title="URL Avatar"
@@ -14,6 +14,7 @@ const CardExampleWithAvatar = (props) => (
     <CardMedia
       overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
     >
+    {console.log('heyyyyyyy im herreee and working ')}
       <img src={`${this.props.picture}`} alt="" />
     </CardMedia>
     <CardTitle title="Card title" subtitle="Card subtitle" />
@@ -25,6 +26,7 @@ const CardExampleWithAvatar = (props) => (
       <Button label="Action2" />
     </CardActions>
   </Card>
+  </div>
 );
 
-export default CardExampleWithAvatar;
+export default Vendor;

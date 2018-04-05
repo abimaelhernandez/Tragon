@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Select from 'react-select';
 import {Switch, Route, withRouter} from 'react-router-dom';
-
+import Vendor from '../components/profile/AvatarVender.jsx';
 import Results from './Results.jsx';
 import Home from './HomePage.jsx'
 
@@ -37,7 +37,7 @@ class HomeContainer extends Component {
       <div>
         <Switch>
           <Route exact path="/" render={(props) => <Home submitSearch={this.submitSearch} /> } />
-          <Route render={(props) => <Results {...props} vendors={this.state.vendors} /> } />
+          <Route path="/vendor" component={Vendor} />
         </Switch>
       </div>
     );

@@ -5,6 +5,8 @@ import HeaderBar from './components/home/HeaderBar.jsx';
 import HomeContainer from './Pages/HomeContainer.jsx';
 import Profile from './Pages/Profile.jsx';
 import MyGoogleMap from './components/Map/MapConfig.jsx';
+import Vendor from './components/VendorPage/VendorPage.jsx';
+
 
 const App = () => (
   <BrowserRouter>
@@ -15,7 +17,7 @@ const App = () => (
         <main id="main-content">
         <Switch>
           <Route path="/" component={HomeContainer} />
-          <Route path={"/user/:id"} component={Profile} />
+          <Route path="/user/:id" component={Profile} />          
         </Switch>
         </main>
     </div>
