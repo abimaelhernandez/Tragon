@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 import Select from 'react-select';
-import {Switch, Route, withRouter} from 'react-router-dom';
 
 import Results from './Results.jsx';
 import Home from './HomePage.jsx'
 
-class HomeContainer extends Component {
+export default class HomeContainer extends Component {
   state = {
     selectedOption: '',
-    vendors: []
+    vendors: null
   }
 
   submitSearch = (query) => {
@@ -29,8 +28,8 @@ class HomeContainer extends Component {
     this.props.history.push(`/search?query=${query}`)
   }
 
-  shouldComponentUpdate(nextProps) {
-    return nextProps.location !== this.props.location
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.vendors !== nextState.vendors
   }
 
   componentWillUnmount() {
@@ -40,13 +39,12 @@ class HomeContainer extends Component {
   render() {
     return (
       <div>
-        <Switch>
-          <Route exact path="/" render={(props) => <Home submitSearch={this.submitSearch} /> } />
-          <Route path={`${this.props.location}`} render={(props) => <Results vendors={this.state.vendors} {...props} /> } />
-        </Switch>
+        {this.state.vendors ? (
+          <Results vendors={this.state.vendors} />
+        ) : (
+          <Home submitSearch={this.submitSearch} />
+        )}
       </div>
     );
   }
 }
-
-export default withRouter(HomeContainer)
