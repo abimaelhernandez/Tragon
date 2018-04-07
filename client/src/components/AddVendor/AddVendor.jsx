@@ -1,15 +1,8 @@
-
-import * as React from 'react';
+import React, {Component} from 'react';
 import { MemberEntity } from '../../database/schema.js';
 import { Input, Button } from '../../common/components/form';
 
-interface Props {
-  member: MemberEntity;
-  onChange: (fieldName: string, value: string) => void;
-  onSave: () => void;
-}
-
-export const MemberForm: React.StatelessComponent<Props> = (props) => {
+export default class VendorPageContainer extends Component => {
   return (
     <form>
       <h1>Manage member</h1>
@@ -24,7 +17,7 @@ export const MemberForm: React.StatelessComponent<Props> = (props) => {
       <Input
         name="avatar_url"
         label="Avatar Url"
-        value={props.member.avatar_url}
+        value={props.vendor}
         onChange={props.onChange}
       />
 
