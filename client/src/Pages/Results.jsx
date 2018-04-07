@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import MyGoogleMap from '../components/Map/MapConfig.jsx'
 
 export default class Results extends Component {
- state = {
-   vendors: []
- }
+  constructor(props){
+    super(props)
+    this.state = {
+      vendors: []
+    }
+  }
 
  componentDidMount() {
    this.setState({
@@ -13,14 +16,12 @@ export default class Results extends Component {
  }
 
  render() {
+   const points =
    return (
      <div>
-       <form>
-         <input
-           placeholder="Search for..."
-           onChange={this.handleInputChange}
-         />
-       </form>
+       {console.log('THIS IS THE PROPS NOW', this.props.vendors.map(function(obj){
+         return obj.location.coordinates;
+       }))}
        <MyGoogleMap />
      </div>
    )

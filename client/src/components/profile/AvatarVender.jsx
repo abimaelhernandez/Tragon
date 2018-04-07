@@ -24,7 +24,6 @@ const AvatarVender = (props) => (
       <Button label="Action2" />
     </CardActions>
   </Card>
-  </div>
 );
 
 export default AvatarVender;
