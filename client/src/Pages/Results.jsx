@@ -15,14 +15,13 @@ export default class Results extends Component {
    })
  }
 
+ //const points =
  render() {
-   const points =
+   let local = this.props.vendors
+
    return (
      <div>
-       {console.log('THIS IS THE PROPS NOW', this.props.vendors.map(function(obj){
-         return obj.location.coordinates;
-       }))}
-       <MyGoogleMap />
+       <MyGoogleMap points={local}/>
      </div>
    )
  }
