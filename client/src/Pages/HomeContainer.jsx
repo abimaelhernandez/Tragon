@@ -35,7 +35,6 @@ export default class HomeContainer extends Component {
   componentWillUnmount() {
 
   }
-
   render() {
     return (
       <div>
