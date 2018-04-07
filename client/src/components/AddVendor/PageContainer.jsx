@@ -30,11 +30,11 @@ export default class VendorPageContainer extends Component {
     this.onSave = this.onSave.bind(this);
   }
 
-onFieldValueChange(fieldName: string, value: string) {
+onFieldValueChange => {
     const nextState = {
-      ...this.state,
+      this.state,
       vendor: {
-        ...this.state.member,
+      this.state.member,
         [fieldName]: value,
       }
     };
