@@ -36,7 +36,6 @@ export default class HomeContainer extends Component {
 
   }
   render() {
-    {console.log('this is the state vendor data', this.state.vendors)}
     return (
       <div>
         {this.state.vendors ? (
