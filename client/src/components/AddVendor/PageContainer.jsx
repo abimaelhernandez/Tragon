@@ -1,21 +1,30 @@
 import * as React from 'react';
-import { hashHistory } from 'react-router';
-import { MemberEntity } from '../../database/schema.js';
-import { MemberPage } from './page';
+import { Link } from 'react-router-dom';
+import { vendorSchema } from '../../database/schema.js';
+import { VendorPage } from './page';
 
 interface State {
-  member: MemberEntity;
+  vendor: VendorEntity;
 }
 
-export class MemberPageContainer extends React.Component<{}, State> {
+export class VendorPageContainer extends React.Component<{}, State> {
   constructor() {
     super();
 
     this.state = {
-      member: {
-        id: ,
-        login: ,
-        avatar_url: ,
+      vendor: {
+        name: String,
+        category: String,
+        location: {
+          type:{type:String},
+          coordinates:[Number,Number]
+        },
+        picture: String,
+        expenses: Number,
+        review : [{
+          body: String,
+          ObjectId: String,
+          }]
       }
     };
 
@@ -26,7 +35,7 @@ export class MemberPageContainer extends React.Component<{}, State> {
   private onFieldValueChange(fieldName: string, value: string) {
     const nextState = {
       ...this.state,
-      member: {
+      vendor: {
         ...this.state.member,
         [fieldName]: value,
       }
@@ -35,13 +44,7 @@ export class MemberPageContainer extends React.Component<{}, State> {
     this.setState(nextState);
   }
 
-  private onSave() {
-    memberAPI.saveMember(this.state.member)
-      .then(() => {
-        toastr.success('Member saved.');
-        hashHistory.goBack();
-      });
-  }
+
 
   render() {
     return (

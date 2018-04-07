@@ -24,7 +24,7 @@ export const MemberForm: React.StatelessComponent<Props> = (props) => {
       <Input
         name="avatar_url"
         label="Avatar Url"
-        value={props.member.avatar_url}
+        value={props.vendor}
         onChange={props.onChange}
       />
 

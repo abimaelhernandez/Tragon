@@ -4,24 +4,20 @@ import { MemberEntity } from '../../database/schema.js';
 import { MemberHeader } from './memberHeader';
 import { MemberRow } from './memberRow';
 
-interface State {
-  members: MemberEntity[];
-}
-
 export class MembersPage extends React.Component<{}, State> {
   constructor() {
     super();
     this.state = { members: [] };
   }
 
-  public componentDidMount() {
-    members.fetchMembers()
+ componentDidMount() {
+    vendors.fetchMembers()
       .then((members) => {
         this.setState({ members });
       });
   }
 
-  public render() {
+   render() {
     return (
       <div className="row">
         <h2> Members Page</h2>
