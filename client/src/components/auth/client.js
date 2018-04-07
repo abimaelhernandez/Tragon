@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-import {AUTH_CONFIG} from '../../../env.js'
+import {AUTH_CONFIG} from '../../../../env.js'
 
 const config = {
   apiKey:`${AUTH_CONFIG.apiKey}`,
@@ -12,5 +12,5 @@ const config = {
 firebase.initializeApp(config);
 
 export const ref = firebase.database().ref();
-export const auth = firebase.auth;
+export const firebaseAuth = firebase.auth;
 export const provider = new firebase.auth.FacebookAuthProvider();

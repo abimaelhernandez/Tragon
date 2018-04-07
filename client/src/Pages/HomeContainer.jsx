@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import Select from 'react-select';
+import FBLogin from '../components/auth/Login.js'
 
 import Results from './Results.jsx';
 import Home from './HomePage.jsx'
 
 export default class HomeContainer extends Component {
   state = {
-    selectedOption: '',
+    isAuthenticated: false,
     vendors: null
   }
 
@@ -17,7 +18,6 @@ export default class HomeContainer extends Component {
       }
     })
     .then(({data}) => {
-      console.log(data)
       this.setState({
         vendors: data
       })
@@ -35,6 +35,7 @@ export default class HomeContainer extends Component {
   render() {
     return (
       <div>
+        <FBLogin />
         {this.state.vendors ? (
           <Results vendors={this.state.vendors} />
         ) : (

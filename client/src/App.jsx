@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import firebase from 'firebase';
 
 import HeaderBar from './components/home/HeaderBar.jsx';
 import HomeContainer from './Pages/HomeContainer.jsx';
