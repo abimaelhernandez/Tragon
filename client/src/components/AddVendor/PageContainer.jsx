@@ -1,13 +1,11 @@
-import * as React from 'react';
+import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import { vendorSchema } from '../../database/schema.js';
 import { VendorPage } from './page';
 
-interface State {
-  vendor: VendorEntity;
-}
 
-export class VendorPageContainer extends React.Component<{}, State> {
+export default class VendorPageContainer extends Component {
+{
   constructor() {
     super();
 
@@ -32,7 +30,7 @@ export class VendorPageContainer extends React.Component<{}, State> {
     this.onSave = this.onSave.bind(this);
   }
 
-  private onFieldValueChange(fieldName: string, value: string) {
+onFieldValueChange(fieldName: string, value: string) {
     const nextState = {
       ...this.state,
       vendor: {

@@ -1,5 +1,5 @@
 
-import * as React from 'react';
+import React, {Component} from 'react';
 import { MemberEntity } from '../../database/schema.js';
 import { Input, Button } from '../../common/components/form';
 

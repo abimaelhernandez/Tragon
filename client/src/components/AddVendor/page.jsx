@@ -1,5 +1,5 @@
 
-import * as React from 'react';
+import React, {Component} from 'react';
 
 
 interface Props {
@@ -8,7 +8,8 @@ interface Props {
   onSave: () => void;
 }
 
-export const VendorPage: React.StatelessComponent<Props> = (props) => {
+
+export default class VendorPage extends Component {
   return (
     <VendorForm
       vendor={props.vendor}
