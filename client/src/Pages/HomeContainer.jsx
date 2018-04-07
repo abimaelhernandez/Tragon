@@ -37,6 +37,9 @@ export default class HomeContainer extends Component {
     return this.state.vendors !== nextState.vendors
   }
 
+  componentWillUnmount() {
+
+  }
   render() {
     firebaseAuth().onAuthStateChanged((user) => {
       if (user) {
