@@ -18,6 +18,10 @@ const App = ({history}) => (
           <Route path="user" component={Profile} />
           <Route path="vendor" component={AvatarVender} />
           <Route path="/" component={HomeContainer} />
+          <IndexRoute component={About} />
+          <Route path="/about" component={About} />
+          <Route path="/members" component={MembersPage} />
+          <Route path="/member" component={MemberPageContainer} />
         </Switch>
         </main>
     </div>
