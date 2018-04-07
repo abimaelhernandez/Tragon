@@ -11,7 +11,7 @@ const HeaderBar = () => (
           <Link to="/"><Button id='tabButtonHome' color="inherit">Home</Button></Link>
           <Link to="user"><Button id='AvatarVender' label="profile" color="inherit">Profile</Button></Link>
           <Link to="vendor"><Button id='AvatarVender' label="profile" color="inherit">AddVendor</Button></Link>
-          <div className='Log'><Button id='Login' label="Userlogin" color="inherit">Log in</Button></div>
+          <Link to="login"><div className='Log'><Button id='Login' label="Userlogin" color="inherit">Login</Button></div></Link>
         </Toolbar>
     </AppBar>
 );
