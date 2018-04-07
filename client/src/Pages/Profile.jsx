@@ -29,7 +29,6 @@ export default class Profile extends React.Component {
     return (
       <div>
         <ul>
-          <
           <AvatarVender vendors={this.state.person} picture={this.state.person.picture} />
         </ul>
       </div>
