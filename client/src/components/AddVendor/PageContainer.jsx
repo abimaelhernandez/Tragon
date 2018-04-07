@@ -5,7 +5,6 @@ import { VendorPage } from './page';
 
 
 export default class VendorPageContainer extends Component {
-{
   constructor() {
     super();
 
