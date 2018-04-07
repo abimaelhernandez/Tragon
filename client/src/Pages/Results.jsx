@@ -18,7 +18,6 @@ export default class Results extends Component {
  //const points =
  render() {
    let local = this.props.vendors
-
    return (
      <div>
        <MyGoogleMap points={local}/>

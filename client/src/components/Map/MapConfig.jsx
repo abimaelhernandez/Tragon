@@ -17,14 +17,10 @@ const MyGoogleMap = compose(
     defaultZoom = {11}
     defaultCenter={{ lat:19.397925, lng:-99.171663}}
   >
-
   {props.points.map(function(obj){
     return <Marker
       position={{lat:obj.location.coordinates[0],lng:obj.location.coordinates[1]}}/>
   })}
-  {console.log('THIS IS THE PROPS NOW', props.points.map(function(obj){
-      return obj.location.coordinates;
-    }))}
 </GoogleMap>
 )
 
