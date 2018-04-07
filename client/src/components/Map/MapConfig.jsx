@@ -17,9 +17,15 @@ const MyGoogleMap = compose(
     defaultZoom = {11}
     defaultCenter={{ lat:19.397925, lng:-99.171663}}
   >
+  {console.log(props.points)}
   {props.points.map(function(obj){
     return <Marker
-      position={{lat:obj.location.coordinates[0],lng:obj.location.coordinates[1]}}/>
+            position={
+              {lat:obj.location.coordinates[0],
+               lng:obj.location.coordinates[1]}
+              }
+            key={obj._id}
+            />
   })}
 </GoogleMap>
 )

@@ -1,8 +1,12 @@
 import firebase from 'firebase';
 import {ref, firebaseAuth, provider} from './client.js'
 import React, {Component} from 'react';
+import {Redirect} from 'react-router-dom';
 
-export default class FBLogin extends Component {
+export default class Login extends Component {
+  state = {
+    loggedIn: false
+  }
 
   componentDidMount() {
     window.fbAsyncInit = function() {
@@ -37,7 +41,10 @@ export default class FBLogin extends Component {
     firebaseAuth().signInWithPopup(provider)
     .then((result) => {
       const token = result.credential.accessToken;
-      const user = result.user;
+      const user = result.user.displayName;
+      this.setState({
+        loggedIn: true
+      })
       console.log(`${user} is signed in`)
     })
     .catch((error) => {
@@ -46,7 +53,7 @@ export default class FBLogin extends Component {
   }
 
   checkLoginState = () => {
-    FB.getLoginStatus(function(response) {
+    FB.getLoginStatus((response) => {
       statusChangeCallback(response);
     });
   }
@@ -62,14 +69,17 @@ export default class FBLogin extends Component {
   }
 
   render() {
+    if (this.state.loggedIn) {
+      (<Redirect to="/" />)
+    }
     return (
-      <div className="fb-login-button"
-      data-width="175" data-max-rows="1"
-      data-size="large" data-button-type="continue_with"
-      data-show-faces="false"
-      data-auto-logout-link="false"
-      data-use-continue-as="true"
-      onClick={this.handleFacebook}>
+      <div className="col-md-4">
+        <div className="form-group col-md-4">
+          <a className="btn btn-block btn-social btn-facebook" onClick={this.handleFacebook}>
+            <i className="fab fa-facebook-square"></i>
+            Sign in with Facebook
+          </a>
+        </div>
       </div>
     );
   }

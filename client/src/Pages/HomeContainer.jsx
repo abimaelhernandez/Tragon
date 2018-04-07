@@ -1,19 +1,11 @@
 import React, {Component} from 'react';
-import firebase from 'firebase';
-import {firebaseAuth} from '../components/auth/client.js'
-import FBLogin from '../components/auth/Login.js'
 
 import Results from './Results.jsx';
 import Home from './HomePage.jsx'
 
 export default class HomeContainer extends Component {
   state = {
-    isAuthenticated: false,
     vendors: null
-  }
-
-  componentDidMount(){
-
   }
 
   submitSearch = (query) => {
@@ -37,21 +29,7 @@ export default class HomeContainer extends Component {
     return this.state.vendors !== nextState.vendors
   }
 
-  componentWillUnmount() {
-
-  }
   render() {
-    firebaseAuth().onAuthStateChanged((user) => {
-      if (user) {
-        this.setState({
-          isAuthenticated: true
-        });
-      } else {
-        this.setState({
-          isAuthenticated: false
-        });
-      }
-    });
     return (
       <div>
         {this.state.vendors ? (
