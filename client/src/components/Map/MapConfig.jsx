@@ -1,6 +1,5 @@
 import React from "react"
-import {compose, withProps} from "recompose";
-import {GOOGLE_API} from '../../../../env.js';
+import {compose, withProps, withStateHandlers} from "recompose";
 import {withScriptjs, withGoogleMap, GoogleMap, Marker,Infowindow} from "react-google-maps";
 
 const MyGoogleMap = compose(
