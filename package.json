@@ -7,8 +7,7 @@
     "dev": "webpack --config webpack.config.js --watch --mode development",
     "dev-start": "nodemon server/index.js",
     "start": "node server/index.js",
-    "prod": "NODE_ENV=production node server/index.js",
-    "postinstall": "webpack --config webpack.config.prod.js --mode production"
+    "prod": "NODE_ENV=production node server/index.js"
   },
   "repository": {
     "type": "git",
