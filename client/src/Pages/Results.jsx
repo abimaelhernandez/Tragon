@@ -12,6 +12,12 @@ export default class Results extends Component {
    })
  }
 
+ componentWillUnmount(){
+   this.setState({
+     vendors: null
+   })
+ }
+ 
  //const points =
  render() {
    let local = this.props.vendors
