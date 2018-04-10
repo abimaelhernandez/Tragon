@@ -1,5 +1,4 @@
 import firebase from 'firebase';
-import {AUTH_CONFIG} from '../../../../env.js'
 
 const config = {
   apiKey:`${process.env.apiKey}`,
