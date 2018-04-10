@@ -6,4 +6,20 @@ export default class AddVendor extends Component {
     tag: '',
     location: ''
   }
+
+  addNewVendor = () => {
+    axios.post()
+  }
+
+  render() {
+    return(
+      <div>
+        Name: <input></input>
+        location: <input></input>
+        Price: <input></input>
+
+
+      </div>
+    )
+  }
 }

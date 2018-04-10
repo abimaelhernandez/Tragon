@@ -1,29 +1,55 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {firebaseAuth} from './components/auth/client.js'
 
 import HeaderBar from './components/home/HeaderBar.jsx';
+import Login from './components/auth/Login.jsx'
 import HomeContainer from './Pages/HomeContainer.jsx';
 import Profile from './Pages/Profile.jsx';
 import AvatarVender from './components/profile/AvatarVender.jsx';
-import MyGoogleMap from './components/Map/MapConfig.jsx';
-import Vendor from './components/VendorPage/VendorPage.jsx';
 
+export default class App extends Component {
+  state = {
+    isAuthenticated: false,
+    user: undefined
+  }
 
-const App = ({history}) => (
-  <BrowserRouter>
-      <div>
-        <header>
-        <HeaderBar />
-        </header>
-        <main id="main-content">
-        <Switch>
-          <Route path="user" component={Profile} />
-          <Route path="vendor" component={AvatarVender} />
-          <Route path="/" component={HomeContainer} />
-        </Switch>
-        </main>
-    </div>
-  </BrowserRouter>
-)
+  componentDidMount(){
+    this.removeAuthListener = firebaseAuth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({
+          isAuthenticated: true,
+          user: user
+        });
+      }
+    });
+  }
 
-export default App;
+  logout = (e) => {
+    e.preventDefault();
+    firebaseAuth().signOut().then(() =>{
+      setState({
+        isAuthenticated: false,
+        user: undefined
+      })
+    });
+  }
+
+  render() {
+    return (
+      <BrowserRouter>
+        <div>
+          <HeaderBar authenticated={this.state.isAuthenticated} logout={this.logout} />
+          <main id="main-content">
+            <Switch>
+              <Route exact path="/login" component={Login} />
+              <Route path="/user" component={Profile} />
+              <Route path="/vendor" component={AvatarVender} />
+              <Route path="/" render={(props) => <HomeContainer {...props} /> } />
+            </Switch>
+          </main>
+        </div>
+      </BrowserRouter>
+    )
+  }
+}
