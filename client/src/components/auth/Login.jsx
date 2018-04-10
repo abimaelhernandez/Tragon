@@ -40,12 +40,9 @@ export default class Login extends Component {
     e.preventDefault();
     firebaseAuth().signInWithPopup(provider)
     .then((result) => {
-      const token = result.credential.accessToken;
-      const user = result.user.displayName;
       this.setState({
         loggedIn: true
       })
-      console.log(`${user} is signed in`)
     })
     .catch((error) => {
       console.error(error);
@@ -68,7 +65,6 @@ export default class Login extends Component {
     if (this.state.loggedIn) {
       return <Redirect to="/" />
     }
-
     return (
       <div className="col-md-4">
         <div className="form-group col-md-4">

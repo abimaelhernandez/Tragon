@@ -21,8 +21,17 @@ export default class App extends Component {
           isAuthenticated: true,
           user: user
         });
-        console.log(user)
       }
+    });
+  }
+
+  logout = (e) => {
+    e.preventDefault();
+    firebaseAuth().signOut().then(() =>{
+      setState({
+        isAuthenticated: false,
+        user: undefined
+      })
     });
   }
 
@@ -30,7 +39,7 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <HeaderBar authenticated={this.state.isAuthenticated} />
+          <HeaderBar authenticated={this.state.isAuthenticated} logout={this.logout} />
           <main id="main-content">
             <Switch>
               <Route exact path="/login" component={Login} />
