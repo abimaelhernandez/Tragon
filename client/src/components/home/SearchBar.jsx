@@ -38,6 +38,7 @@ export default class SearchBar extends Component {
         className="SearchButton"
         variant="raised"
         color="primary"
+        onClick={this.newSearch}
         onClick={this.newSearch}>
         Search
       </Button>

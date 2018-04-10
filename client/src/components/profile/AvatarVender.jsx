@@ -14,25 +14,26 @@ const styles = {
 };
 
 const AvatarVender = (props) => (
-  <div>
-    <Card>
-      <CardMedia>
-        <img src={`${props.picture}`} alt="" />
-      </CardMedia>
-      <CardContent>
-        <Typography gutterBottom variant="headline" component="h2">
-          Vendor Goes here
-        </Typography>
-        <Typography component="p">
-          Showing the vender info here
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small" label="Action1" />
-        <Button size="small" label="Action2" />
-      </CardActions>
-    </Card>
-  </div>
+  <Card>
+    <CardHeader
+      title="URL Avatar"
+      subtitle="Subtitle"
+      avatar=""
+    />
+    <CardMedia
+      overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
+    >
+    <img src={`${this.props.picture}`} alt="" />
+    </CardMedia>
+    <CardTitle title="Card title" subtitle="Card subtitle" />
+    <CardText>
+      Showing the vender info here
+    </CardText>
+    <CardActions>
+      <Button label="Action1" />
+      <Button label="Action2" />
+    </CardActions>
+  </Card>
 );
 
 export default withStyles(styles)(AvatarVender);

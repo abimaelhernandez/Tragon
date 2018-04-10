@@ -1,5 +1,5 @@
 import React from "react"
-import {compose, withProps, withStateHandlers} from "recompose";
+import {compose, withProps} from "recompose";
 import {GOOGLE_API} from '../../../../env.js';
 import {withScriptjs, withGoogleMap, GoogleMap, Marker,Infowindow} from "react-google-maps";
 
@@ -7,8 +7,8 @@ const MyGoogleMap = compose(
   withProps({
     googleMapURL:`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API}&callback=initMap`,
     loadingElement: <div style={{height: `75%`}} />,
-    containerElement:<div style={{height: `750px`}}/>,
-    mapElement:<div style={{height:`75%`}}/>,
+    containerElement:<div style={{height: `450px`}}/>,
+    mapElement:<div style={{height:`50%`}}/>,
   }),
   withScriptjs,
   withGoogleMap
@@ -29,3 +29,4 @@ const MyGoogleMap = compose(
 )
 
 export default MyGoogleMap;
+//resize to fit with the result page with vendor card
