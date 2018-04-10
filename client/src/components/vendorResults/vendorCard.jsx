@@ -6,40 +6,48 @@ import Typography from 'material-ui/Typography';
 
 const Styles = {
   card : {
-    maxWith:345,
+    maxWith:40,
   },
   media: {
-    height:200,
+    height:100,
   },
 };
 ////
 export default class VendorCard extends Component{
-   constructor(){
-     super()
+   constructor(props){
+     super(props)
 
    }
-/////////
-
+///////// need to display name , expences , reviews
+   // const local = this.props.vendors =>  points={local}/>
 ////////
    render(){
      return(
      <div>
-       {props.points.map(function(obj){
-         return
+       {this.props.points.map(function(obj){
+         return <Card>
+                  <CardMedia
+                    image={obj.picture}
+                    title="Vendors information"
+                    key={obj._id}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant ='headline' component='h2'>
+                        {obj.name}
+                      </Typography>
+                        <Typography  gutterBottom variant ='headline' component='h2'>
+                          {obj.category}
+                        </Typography>
+                          <Typography paragraph>
+                           {obj.review[0].body}
+                          </Typography>
+                            <Typography>
+                              expenses level {obj.expenses}
+                            </Typography>
+                    </CardContent>
+                </Card>
        })}
-       <Card className>
-         <CardMedia
-           className
-           image
-           title="Vendors information"
-           />
-         <CardContent>
-           <Typography gutterBottom variant ='headline' component='h2'>
-             Vendor
-           </Typography>
-         </CardContent>
 
-       </Card>
        <p>{console.log('hello World im heree yaaaaaa diggggggg')}</p>
      </div>
     )
