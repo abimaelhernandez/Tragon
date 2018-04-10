@@ -4,12 +4,9 @@ import VendorCard from '../components/vendorResults/vendorCard.jsx'
 
 
 export default class Results extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
+  state = {
       vendors: []
     }
-  }
 
  componentDidMount() {
    this.setState({

@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
-import Select from 'react-select';
 
 import Results from './Results.jsx';
 import Home from './HomePage.jsx'
 
 export default class HomeContainer extends Component {
   state = {
-    selectedOption: '',
     vendors: null
   }
 
@@ -17,7 +15,6 @@ export default class HomeContainer extends Component {
       }
     })
     .then(({data}) => {
-      console.log(data)
       this.setState({
         vendors: data
       })
@@ -32,9 +29,6 @@ export default class HomeContainer extends Component {
     return this.state.vendors !== nextState.vendors
   }
 
-  componentWillUnmount() {
-
-  }
   render() {
     return (
       <div>

@@ -1,6 +1,17 @@
 import React from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/Button';
+import Card, {CardActions, CardContent, CardMedia} from 'material-ui/Card';
+import Button from 'material-ui/Button';
+import Typography from 'material-ui/Typography'
+import {withStyles} from 'material-ui/styles';
+
+const styles = {
+  card: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 200,
+  },
+};
 
 const AvatarVender = (props) => (
   <Card>
@@ -25,4 +36,4 @@ const AvatarVender = (props) => (
   </Card>
 );
 
-export default AvatarVender;
+export default withStyles(styles)(AvatarVender);
