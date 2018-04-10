@@ -58,10 +58,6 @@ export default class Login extends Component {
     });
   }
 
-  logout = () => {
-    return firebaseAuth().signOut();
-  }
-
   saveUser = (user) => {
     return ref.child(`users/${user.uid}`)
       .set(user)
@@ -70,8 +66,9 @@ export default class Login extends Component {
 
   render() {
     if (this.state.loggedIn) {
-      (<Redirect to="/" />)
+      return <Redirect to="/" />
     }
+
     return (
       <div className="col-md-4">
         <div className="form-group col-md-4">

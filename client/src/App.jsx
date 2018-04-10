@@ -18,12 +18,14 @@ export default class App extends Component {
     this.removeAuthListener = firebaseAuth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({
-          isAuthenticated: true
+          isAuthenticated: true,
+          user: user
         });
+        console.log(user)
       }
     });
   }
-  
+
   render() {
     return (
       <BrowserRouter>
