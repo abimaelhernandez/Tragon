@@ -12,8 +12,7 @@ const AvatarVender = (props) => (
     <CardMedia
       overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
     >
-    {console.log('heyyyyyyy im herreee and working ')}
-      <img src={`${this.props.picture}`} alt="" />
+    <img src={`${this.props.picture}`} alt="" />
     </CardMedia>
     <CardTitle title="Card title" subtitle="Card subtitle" />
     <CardText>
