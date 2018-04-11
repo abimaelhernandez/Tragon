@@ -5,7 +5,7 @@ import {withScriptjs, withGoogleMap, GoogleMap, Marker,Infowindow} from "react-g
 
 const MyGoogleMap = compose(
   withProps({
-    googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API}`,
+    googleMapURL: "https://maps.googleapis.com/maps/api/js?key=" + process.env.GOOGLE_API,
     loadingElement: <div style={{height: `75%`}} />,
     containerElement:<div style={{height: `450px`}}/>,
     mapElement:<div style={{height:`50%`}}/>,
