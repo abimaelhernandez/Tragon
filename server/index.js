@@ -5,11 +5,11 @@ const port = (process.env.PORT || 3000);
 
 admin.initializeApp({
   credential: admin.credential.cert({
-    project_id: "tragon-8e6ce",
+    project_id: process.env.projectId,
     private_key: process.env.FIREBASE_PRIVATE_KEY,
     client_email: process.env.FIREBASE_CLIENT_EMAIL,
   }),
-  databaseURL: process.env.databaseURL
+  databaseURL: "https://tragon-8e6ce.firebaseio.com"
 });
 
 app.listen(port, function() {
