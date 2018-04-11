@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 
 const config = {
-  apiKey:process.env.apiKey,
+  apiKey: `${process.env.apiKey}`,
   authDomain: process.env.authDomain,
   databaseURL: "https://tragon-8e6ce.firebaseio.com",
   storageBucket: process.env.storageBucket,
