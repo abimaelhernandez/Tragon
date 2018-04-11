@@ -35,3 +35,4 @@ coverage
 
 
  client/dist/bundle.js.map
+.env
