@@ -47,8 +47,6 @@ export default class VendorCard extends Component{
                     </CardContent>
                 </Card>
        })}
-
-       <p>{console.log('hello World im heree yaaaaaa diggggggg')}</p>
      </div>
     )
   }
