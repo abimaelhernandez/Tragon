@@ -19,13 +19,12 @@ export default class Results extends Component {
      vendors: null
    })
  }
- 
+
  //const points =
  render() {
    const local = this.props.vendors
    return (
      <div>
-       <MyGoogleMap points={local}/>
        <VendorCard points={local}/>
      </div>
    )

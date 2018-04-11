@@ -3,6 +3,7 @@ import ReactDOM  from 'react-dom'
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import { withStyles } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
+import MyGoogleMap from '../../components/Map/MapConfig.jsx'
 
 const Styles = {
   card : {
@@ -22,6 +23,7 @@ export default class VendorCard extends Component{
    // const local = this.props.vendors =>  points={local}/>
 ////////
    render(){
+     console.log(this.props)
      return(
      <div>
        {this.props.points.map(function(obj){
@@ -44,6 +46,7 @@ export default class VendorCard extends Component{
                             <Typography>
                               expenses level {obj.expenses}
                             </Typography>
+                            <MyGoogleMap loc={obj.location} />
                     </CardContent>
                 </Card>
        })}
