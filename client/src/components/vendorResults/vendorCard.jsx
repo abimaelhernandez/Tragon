@@ -32,19 +32,29 @@ export default class VendorCard extends Component{
                     title="Vendors information"
                     />
                   <CardContent>
-                        <Typography gutterBottom variant='headline' component='h2'>
-                          {obj.name}
-                        </Typography>
-                        <Typography  className='category' component='h2'>
-                          {obj.category}
-                        </Typography>
+                    <Grid container spacing ={24}>
+                      <Grid item xs={8} sm={4}>
+                        <Paper className={'name'}>
+                          <Typography gutterBottom variant='headline' component='h2'>
+                            {obj.name}
+                          </Typography>
+                        </Paper>
+                      </Grid>
+                      <Grid item xs={8} sm={4}>
+                        <Paper className='category'>
+                          <Typography variant='headline' component='h2'>
+                            {obj.category}
+                          </Typography>
+                        </Paper>
+                      </Grid>
                         <Typography className='review'paragraph>
                           {obj.review[0].body}
                         </Typography>
                         <Typography className='expences'>
                           expenses level {obj.expenses}
                         </Typography>
-                        <MyGoogleMap loc={obj.location} />
+                      <MyGoogleMap loc={obj.location} />
+                    </Grid>
                     </CardContent>
                 </Card>
        })}

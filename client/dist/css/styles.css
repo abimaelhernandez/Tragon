@@ -12,10 +12,14 @@ html {
  min-height: 100%;
 }
 /*this is where css for card of results starts*/
+.name{
+  position:relative;
+
+}
 .category{
   position: relative;
-  left: 500px;
-  bottom: 27px
+  left: 25px;
+  bottom: 0px
 }
 .map{
   position:relative;
