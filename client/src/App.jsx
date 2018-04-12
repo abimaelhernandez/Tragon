@@ -6,7 +6,7 @@ import HeaderBar from './components/home/HeaderBar';
 import Login from './components/auth/Login';
 import HomeContainer from './Pages/HomeContainer';
 import Profile from './Pages/Profile';
-import AvatarVender from './components/profile/AvatarVender';
+import AddVendorContainer from './Pages/AddVendorContainer';
 
 const AuthenticatedRoute = ({component: Component, authenticated, ...rest}) => {
   return (
@@ -25,18 +25,18 @@ export default class App extends Component {
     user: undefined,
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.removeAuthListener = firebaseAuth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({
           isAuthenticated: true,
-          user: user
+          user: user,
         });
       } else {
         this.setState({
           isAuthenticated: false,
-          user: undefined
-        })
+          user: undefined,
+        });
       }
     });
   }
@@ -60,12 +60,12 @@ export default class App extends Component {
             <Switch>
               <Route exact path="/login" component={Login} />
               <AuthenticatedRoute authenticated={this.state.isAuthenticated} path="/user" component={Profile} />
-              <AuthenticatedRoute authenticated={this.state.isAuthenticated} path="/vendor" component={AvatarVender} />
-              <Route path="/" render={(props) => <HomeContainer {...props} /> } />
+              <AuthenticatedRoute authenticated={this.state.isAuthenticated} path="/vendor" component={AddVendorContainer} />
+              <Route path="/" render={props => <HomeContainer {...props} />} />
             </Switch>
           </main>
         </div>
       </BrowserRouter>
-    )
+    );
   }
 }

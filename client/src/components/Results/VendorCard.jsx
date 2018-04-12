@@ -1,11 +1,11 @@
 import React from 'react';
 import Card, {CardContent, CardMedia} from 'material-ui/Card';
-import {Typography} from 'material-ui/Typography';
+import Typography from 'material-ui/Typography';
 
-const VendorCard = () => (
+const VendorCard = (props) => (
   <div>
-    {this.props.points.map((obj) => {
-      return (
+    {props.points.map(obj =>
+      (
         <Card key={obj._id}>
           <CardMedia
             image={obj.picture}
@@ -25,8 +25,8 @@ const VendorCard = () => (
               expenses level {obj.expenses}
             </Typography>
           </CardContent>
-        </Card>);
-      })}
+        </Card>
+      ))}
   </div>
 );
 
