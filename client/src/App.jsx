@@ -1,41 +1,42 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
-import {firebaseAuth} from './components/auth/client.js'
+import {firebaseAuth} from './components/auth/client';
 
-import HeaderBar from './components/home/HeaderBar.jsx';
-import Login from './components/auth/Login.jsx'
-import HomeContainer from './Pages/HomeContainer.jsx';
-import Profile from './Pages/Profile.jsx';
-import AvatarVender from './components/profile/AvatarVender.jsx';
+import HeaderBar from './components/home/HeaderBar';
+import Login from './components/auth/Login';
+import HomeContainer from './Pages/HomeContainer';
+import Profile from './Pages/Profile';
+import AddVendorContainer from './Pages/AddVendorContainer';
 
 const AuthenticatedRoute = ({component: Component, authenticated, ...rest}) => {
   return (
     <Route
       {...rest}
-      render={(props) => authenticated === true
+      render={props => (authenticated === true
           ? <Component {...props} {...rest} />
-          : <Redirect to={{pathname: '/login'}} /> } />
-  )
-}
+        : <Redirect to={{pathname: '/login'}} />)}
+    />
+  );
+};
 
 export default class App extends Component {
   state = {
     isAuthenticated: false,
-    user: undefined
+    user: undefined,
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.removeAuthListener = firebaseAuth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({
           isAuthenticated: true,
-          user: user
+          user: user,
         });
       } else {
         this.setState({
           isAuthenticated: false,
-          user: undefined
-        })
+          user: undefined,
+        });
       }
     });
   }
@@ -45,8 +46,8 @@ export default class App extends Component {
     firebaseAuth().signOut().then(() => {
       this.setState({
         isAuthenticated: false,
-        user: undefined
-      })
+        user: undefined,
+      });
     });
   }
 
@@ -59,12 +60,12 @@ export default class App extends Component {
             <Switch>
               <Route exact path="/login" component={Login} />
               <AuthenticatedRoute authenticated={this.state.isAuthenticated} path="/user" component={Profile} />
-              <AuthenticatedRoute authenticated={this.state.isAuthenticated} path="/vendor" component={AvatarVender} />
-              <Route path="/" render={(props) => <HomeContainer {...props} /> } />
+              <AuthenticatedRoute authenticated={this.state.isAuthenticated} path="/vendor" component={AddVendorContainer} />
+              <Route path="/" render={props => <HomeContainer {...props} />} />
             </Switch>
           </main>
         </div>
       </BrowserRouter>
-    )
+    );
   }
 }
