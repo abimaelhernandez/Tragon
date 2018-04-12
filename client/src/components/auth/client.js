@@ -1,11 +1,12 @@
 import firebase from 'firebase';
+import {AUTH_CONFIG} from '../../../../env';
 
 const config = {
-  apiKey: `${process.env.apiKey}`,
-  authDomain: process.env.authDomain,
+  apiKey: `${AUTH_CONFIG.apiKey}`,
+  authDomain: `${AUTH_CONFIG.authDomain}`,
   databaseURL: 'https://tragon-8e6ce.firebaseio.com',
-  storageBucket: process.env.storageBucket,
-  messagingSenderId: process.env.messagingSenderId
+  storageBucket: `${AUTH_CONFIG.storageBucket}`,
+  messagingSenderId: `${AUTH_CONFIG.messagingSenderId}`,
 };
 
 firebase.initializeApp(config);

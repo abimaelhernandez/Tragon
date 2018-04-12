@@ -1,9 +1,9 @@
 const app = require('./config.js');
-const admin = require("firebase-admin");
+// const admin = require('firebase-admin');
 
 const port = (process.env.PORT || 3000);
 
-admin.initializeApp({
+/* admin.initializeApp({
   credential: admin.credential.cert({
     project_id: process.env.projectId,
     private_key: process.env.FIREBASE_PRIVATE_KEY,
@@ -11,7 +11,7 @@ admin.initializeApp({
   }),
   databaseURL: "https://tragon-8e6ce.firebaseio.com"
 });
-
-app.listen(port, function() {
+*/
+app.listen(port, () => {
   console.log(`Listening on Port ${port}`);
 });
