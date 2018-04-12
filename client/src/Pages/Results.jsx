@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import MyGoogleMap from '../components/Map/MapConfig.jsx'
+import VendorCard from '../components/vendorResults/vendorCard.jsx'
+
 
 export default class Results extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
+  state = {
       vendors: []
     }
-  }
 
  componentDidMount() {
    this.setState({
@@ -15,12 +14,19 @@ export default class Results extends Component {
    })
  }
 
+ componentWillUnmount(){
+   this.setState({
+     vendors: null
+   })
+ }
+ 
  //const points =
  render() {
-   let local = this.props.vendors
+   const local = this.props.vendors
    return (
      <div>
        <MyGoogleMap points={local}/>
+       <VendorCard points={local}/>
      </div>
    )
  }
