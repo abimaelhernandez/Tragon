@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
-import {firebaseAuth} from './components/auth/client';
+import {firebaseAuth} from './components/Auth/client';
 
-import HeaderBar from './components/home/HeaderBar';
-import Login from './components/auth/Login';
+import HeaderBar from './components/Home/HeaderBar';
+import Login from './components/Auth/Login';
 import HomeContainer from './Pages/HomeContainer';
 import Profile from './Pages/Profile';
 import AddVendorContainer from './Pages/AddVendorContainer';
