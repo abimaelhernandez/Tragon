@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
+import AddVendor from '../components/AddVendor/AddVendor.jsx';
 
 export default class AddVendor extends Component {
-  state = {
-    name: '',
-    tag: '',
-    location: ''
+  constructor(props){
+    super()
+    this.state = {
+      vendorName: ""
+    }
   }
 
    componentDidMount() {
-      AddVendor.fetchMembers()
+      AddVendor.fetchVendors()
         .then((AddVendor) => {
           this.setState({ AddVendor });
         });
@@ -16,31 +18,24 @@ export default class AddVendor extends Component {
 
     submitVendor = () => {
       axios.post('/AddVendor', {
-        Name: this.state.userName
+        //
+        Name: this.state.vendorName
       })
-
-     render() {
+  }
+  render() {
       return (
         <div className="row">
           <h2> Vendor Page</h2>
-          <Link to="/member">New Vendor</Link>
-          <table className="table">
-            <thead>
-              <VendorHeader />
-            </thead>
-            <tbody>
-              {
-                this.state.members.map((Vendor) =>
-                  <VendorRow
-                    key={Vendor.id}
-                    Vendor={Vendor}
-                  />
-                )
-              }
-            </tbody>
-          </table>
+          Vendorname: <input
+            onChange={this.updateVendor}
+            placeholder="Enter vendorname"
+            value={this.state.vendorName}>
+          </input>
+            <br/>
+          <button onClick={this.submitVendor}>
+            Add Vendor
+          </button>
         </div>
       );
     }
-  };
 }

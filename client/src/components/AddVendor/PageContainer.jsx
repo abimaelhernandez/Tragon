@@ -33,7 +33,7 @@ onFieldValueChange => {
     const nextState = {
       this.state,
       vendor: {
-      this.state.member,
+      this.state.vendor,
         [fieldName]: value,
       }
     };
@@ -46,7 +46,7 @@ onFieldValueChange => {
   render() {
     return (
       <MemberPage
-        member={this.state.member}
+        vendor={this.state.vendor}
         onChange={this.onFieldValueChange}
         onSave={this.onSave}
       />

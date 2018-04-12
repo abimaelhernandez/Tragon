@@ -7,7 +7,7 @@ import Profile from './Pages/Profile.jsx';
 import AvatarVender from './components/profile/AvatarVender.jsx';
 import MyGoogleMap from './components/Map/MapConfig.jsx';
 import Vendor from './components/VendorPage/VendorPage.jsx';
-import AddVendor from '../Pages/AddVendor.jsx';
+import AddVendor from './Pages/AddVendor.jsx';
 
 
 const App = ({history}) => (

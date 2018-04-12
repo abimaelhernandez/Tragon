@@ -1,22 +1,15 @@
 import React, {Component} from 'react';
-import { MemberEntity } from '../../database/schema.js';
-import { Input, Button } from '../../common/components/form';
+import { Vendor } from '../../Pages/AddVendor';
 
-export default class VendorPageContainer extends Component => {
+export default class AddVendor extends Component => {
   return (
     <form>
       <h1>Manage member</h1>
 
       <Input
-        name="login"
-        label="Login"
-        value={props.member.login}
-        onChange={props.onChange}
-      />
-
-      <Input
-        name="avatar_url"
-        label="Avatar Url"
+        name={props.vendor.name}
+        category={props.vendor.category}
+        location={props.vendor.location}
         value={props.vendor}
         onChange={props.onChange}
       />
