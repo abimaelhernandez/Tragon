@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Redirect} from 'react-router-dom';
 import Button from 'material-ui/Button';
 
 export default class SearchBar extends Component {
@@ -38,7 +37,6 @@ export default class SearchBar extends Component {
         className="SearchButton"
         variant="raised"
         color="primary"
-        onClick={this.newSearch}
         onClick={this.newSearch}>
         Search
       </Button>
