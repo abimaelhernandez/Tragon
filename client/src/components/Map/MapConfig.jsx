@@ -1,13 +1,12 @@
-import React from "react"
-import {compose, withProps} from "recompose";
-import {GOOGLE_API} from '../../../../env.js';
-import {withScriptjs, withGoogleMap, GoogleMap, Marker,Infowindow} from "react-google-maps";
+import React from 'react';
+import { compose, withProps } from 'recompose';
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
 const googleMapKey = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API}`;
 
 const MyGoogleMap = compose(
   withProps({
-    googleMapURL: {googleMapKey},
+    googleMapURL: googleMapKey,
     loadingElement: <div style={{ height: `75%` }} />,
     containerElement: <div style={{ height: `450px` }} />,
     mapElement: <div style={{ height: `50%` }} />
