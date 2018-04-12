@@ -8,7 +8,6 @@ import HomeContainer from './Pages/HomeContainer.jsx';
 import Profile from './Pages/Profile.jsx';
 import AvatarVender from './components/profile/AvatarVender.jsx';
 
-
 const AuthenticatedRoute = ({component: Component, authenticated, ...rest}) => {
   return (
     <Route
