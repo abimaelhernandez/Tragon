@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import MyGoogleMap from './MapConfig.jsx'
 
 export default class MapResult extends Component {
   state = {
