@@ -11,7 +11,33 @@ html {
  min-width: 1024px;
  min-height: 100%;
 }
+/*this is where css for card of results starts*/
+.category{
+  position: relative;
+  left: 500px;
+  bottom: 27px
+}
+.map{
+  position:relative;
+  left:800px
+}
+.review{
+  position: relative;
+  top:200px;
 
+}
+.expences{
+  position: relative;
+  top:165px;
+  left:500px;
+}
+.card{
+  border-bottom: solid black;
+  height: 340px;
+  border-top: solid black;
+  margin-bottom: 50px;
+}
+/*for the map config of results go directly to map config*/
 #main-content{
   display: flex;
   position: relative;

@@ -6,18 +6,17 @@ import {withScriptjs, withGoogleMap, GoogleMap, Marker,Infowindow} from "react-g
 const MyGoogleMap = compose(
   withProps({
     googleMapURL:`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API}&callback=initMap`,
-    loadingElement: <div style={{height: `25%`}} />,
-  containerElement:<div style={{height: `200px`}}/>,
-mapElement:<div style={{height:`50%`}}/>,
+    loadingElement: <div style={{height: `100%`}} />,
+  containerElement:<div className='map' style={{height: `300px`, width:`300px`,bottom:'100px'}}/>,
+mapElement:<div style={{height:`100%`}}/>,
   }),
   withScriptjs,
   withGoogleMap
 )((props) =>
   <GoogleMap
     defaultZoom = {11}
-    defaultCenter={{ lat:19.397925, lng:-99.171663}}
+    defaultCenter={{lat:props.loc.coordinates[0], lng:props.loc.coordinates[1]}}
   >
-  {console.log('THIS IS THE GOOGLE MAP COMP!!', props.loc)}
      <Marker
             position={{lat:props.loc.coordinates[0],
                        lng:props.loc.coordinates[1]}}
