@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "App for collecting and displaying crowdsourced information about street food vendors",
   "main": "index.js",
+  "engines": {
+    "node": "8.11.x"
+  },
   "scripts": {
     "dev": "webpack --config webpack.config.js --watch --mode development",
     "dev-start": "nodemon server/index.js",
