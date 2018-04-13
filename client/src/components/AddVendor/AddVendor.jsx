@@ -29,30 +29,32 @@ export default class AddVendor extends Component {
   render() {
     return (
       <div>
-        <form>
+        <section>
           <input
             placeholder="Name"
             value={this.state.name}
             onChange={this.updateName}
-          />
+          /> <br />
           <input
             placeholder="Category"
             value={this.state.category}
             onChange={this.updateCategory}
-          />
+          /> <br />
           <input
             placeholder="Location"
             value={this.state.location}
             onChange={this.updateLocation}
-          />
-          <Button
-            label="Save"
-            className="btn btn-default"
-            onClick={this.newVendor}
-          >
-          Add Vendor Info
-          </Button>
-        </form>
+          /> <br />
+        </section>
+        <Button
+          type="submit"
+          color="primary"
+          varient="raised"
+          label="Save"
+          onClick={this.newVendor}
+        >
+        Add Vendor Info
+        </Button>
       </div>
     );
   }

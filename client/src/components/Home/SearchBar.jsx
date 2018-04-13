@@ -32,6 +32,8 @@ export default class SearchBar extends Component {
           />
         </form>
         <Button
+          width="90px"
+          height="40px"
           type="submit"
           className="SearchButton"
           variant="raised"

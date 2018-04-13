@@ -1,16 +1,13 @@
 import React, {Component} from 'react';
-import UserAvatar from '../components/UserProfile/UserAvatar';
+import ProfilePage from '../components/UserProfile/ProfileComp';
 
 export default class Profile extends Component {
-  state = {
-    person: [],
-  }
-
   render() {
-    const {picture, name} = this.state.person;
-    return (
+  const {displayName} = this.props.user;
+  const {photoURL} = this.props.user.providerData[0]
+  return (
       <div>
-        <UserAvatar name={name} picture={picture} />
+        <ProfilePage name={displayName} picture={photoURL} />
       </div>
     );
   }
