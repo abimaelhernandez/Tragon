@@ -1,6 +1,7 @@
+import firebase from 'firebase';
+import {ref, firebaseAuth, provider} from './client.js'
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
-import {ref, firebaseAuth, provider} from './client.js'
 
 export default class Login extends Component {
   state = {
@@ -38,14 +39,14 @@ export default class Login extends Component {
   handleFacebook = (e) => {
     e.preventDefault();
     firebaseAuth().signInWithPopup(provider)
-      .then(() => {
-        this.setState({
-          loggedIn: true,
-        });
+    .then((result) => {
+      this.setState({
+        loggedIn: true
       })
-      .catch((error) => {
-        console.error(error);
-      });
+    })
+    .catch((error) => {
+      console.error(error);
+    });
   }
 
   checkLoginState = () => {
@@ -62,7 +63,7 @@ export default class Login extends Component {
 
   render() {
     if (this.state.loggedIn) {
-      return <Redirect to="/" />;
+      return <Redirect to="/" />
     }
     return (
       <div className="col-md-4">

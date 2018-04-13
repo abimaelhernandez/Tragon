@@ -3,7 +3,8 @@ import { compose, withProps } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 import {GOOGLE_API} from '../../../../env.js';
 
-// const googleMapKey = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API}`;
+// const googleMapKey = process.env.GOOGLE_API;
+// const googleMapPath = 'https://maps.googleapis.com/maps/api/js?key=';
 
 const MyGoogleMap = compose(
   withProps({
