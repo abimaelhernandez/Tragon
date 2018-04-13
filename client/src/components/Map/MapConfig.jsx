@@ -1,22 +1,20 @@
-import React from 'react';
-import { compose, withProps } from 'recompose';
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
+import React from "react"
+import {compose, withProps} from "recompose";
 import {GOOGLE_API} from '../../../../env.js';
-
-// const googleMapKey = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API}`;
+import {withScriptjs, withGoogleMap, GoogleMap, Marker,Infowindow} from "react-google-maps";
 
 const MyGoogleMap = compose(
   withProps({
     googleMapURL:`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API}&callback=initMap`,
     loadingElement: <div style={{height: `100%`}} />,
-    containerElement:<div  style={{height: `300px`, width:`300px`,bottom:'100px'}}/>,
+  containerElement:<div  style={{height: `240px`, width:`300px`,bottom:'100px'}}/>,
     mapElement:<div style={{height:`100%`}}/>,
   }),
   withScriptjs,
   withGoogleMap
 )((props) =>
   <GoogleMap
-    defaultZoom = {11}
+    defaultZoom = {17}
     defaultCenter={{lat:props.loc.coordinates[0], lng:props.loc.coordinates[1]}}
   >
      <Marker
@@ -27,4 +25,5 @@ const MyGoogleMap = compose(
 )
 
 export default MyGoogleMap;
+//resize to fit with the result page with vendor card
 // resize to fit with the result page with vendor card

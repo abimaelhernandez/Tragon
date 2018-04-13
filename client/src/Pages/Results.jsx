@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import MyGoogleMap from '../components/Map/MapConfig';
-import VendorCard from '../components/Results/VendorCard';
+import MyGoogleMap from '../components/Map/MapConfig.jsx';
+import VendorCard from '../components/Results/VendorCard.jsx';
 
 export default class Results extends Component {
   state = {
@@ -12,18 +12,6 @@ export default class Results extends Component {
       vendors: this.props.vendors
     });
   }
-
-  componentWillUnmount() {
-    this.setState({
-      vendors: null,
-    });
-  }
-
- componentWillUnmount(){
-   this.setState({
-     vendors: null
-   })
- }
 
  //const points =
  render() {

@@ -12,7 +12,11 @@ html {
  min-height: 100%;
 }
 /*this is where css for card of results starts*/
-.name{
+.image{
+  position:relative;
+  height:100%;
+
+  }.name{
   position: relative;
 
 }
@@ -23,24 +27,22 @@ html {
 }
 .map{
   position: relative;
-  left:450px;
-  bottom:70px;
-  border-bottom: solid black;
-
+  left:456px;
+  bottom:72px;
 }
 .review{
   position: relative;
-  bottom:200px;
   right:770px;
+  top:210px;
 }
-.expences{
+.expenses{
   position: relative;
-  top:165px;
+  top:145px;
   left:410px;
 }
 .card{
   border-bottom: solid black;
-  height: 340px;
+  height: 250px;
   border-top: solid black;
   margin-bottom: 50px;
 }
