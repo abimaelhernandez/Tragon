@@ -32,6 +32,7 @@ export default class App extends Component {
           isAuthenticated: true,
           user: user,
         });
+        console.log(this.state.user);
       } else {
         this.setState({
           isAuthenticated: false,
@@ -59,7 +60,7 @@ export default class App extends Component {
           <main id="main-content">
             <Switch>
               <Route exact path="/login" component={Login} />
-              <AuthenticatedRoute authenticated={this.state.isAuthenticated} path="/user" component={Profile} />
+              <AuthenticatedRoute authenticated={this.state.isAuthenticated} user={this.state.user} path="/user" component={Profile} />
               <AuthenticatedRoute authenticated={this.state.isAuthenticated} path="/vendor" component={AddVendorContainer} />
               <Route path="/" render={props => <HomeContainer {...props} />} />
             </Switch>

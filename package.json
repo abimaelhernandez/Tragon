@@ -58,6 +58,7 @@
     "react-google-maps": "^9.4.5",
     "react-router-dom": "^4.2.2",
     "react-select": "^1.2.1",
+    "react-star-rating-component": "^1.4.1",
     "recompose": "^0.26.0"
   }
 }

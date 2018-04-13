@@ -1,6 +1,6 @@
 html {
-  background-image: url('merced_food.jpg');
-  height: auto;
+  background-image: url('./cOME.jpg');
+  height: 110%;
   width: 100%;
   position: center center fixed;
  -webkit-background-size: cover;
@@ -11,40 +11,7 @@ html {
  min-width: 1024px;
  min-height: 100%;
 }
-/*this is where css for card of results starts*/
-.name{
-  position: relative;
 
-}
-.category{
-  position: relative;
-  left: 25px;
-  bottom: 0px
-}
-.map{
-  position: relative;
-  left:450px;
-  bottom:70px;
-  border-bottom: solid black;
-
-}
-.review{
-  position: relative;
-  bottom:200px;
-  right:770px;
-}
-.expences{
-  position: relative;
-  top:165px;
-  left:410px;
-}
-.card{
-  border-bottom: solid black;
-  height: 340px;
-  border-top: solid black;
-  margin-bottom: 50px;
-}
-/*for the map config of results go directly to map config*/
 #main-content{
   display: flex;
   position: relative;
@@ -60,6 +27,16 @@ html {
   line-height: normal;
 }
 
+.BackGroundWindow {
+  background-color: #94b8b8;
+  position: relative;
+  top: 130px;
+}
+
+#appBar{
+ background-color: #10108f;
+}
+
 .Log {
  position: absolute;
  left: 1100px;
@@ -67,25 +44,122 @@ html {
 
 .SearchBar {
 position: relative;
-top: 250px;
+top: 190px;
 left: 200px;
 }
 
 .Menu {
 position: relative;
-top: 181.3px;
-left: 835px;
+top: 117px;
+left: 818px;
 }
 
 .FieldInput {
-width: 520px;
-height: 25px;
+  border-radius: 5px;
+  border-width: 0px;
+  width: 520px;
+  height: 35px;
 }
 
 .SearchButton {
+  background-color: #1752c9;
+  position: relative;
+  width: 90px;
+  height: 35px;
+  top: 153px;
+  left: 725px;
+}
+
+.ProfileCard{
+  position: relative;
+  top: 350px;ss
+}
+
+.rate1 {
+  position: relative;
+  left: 90px;
+  top: -41px;
+}
+
+.Fav{
+  width: 80%;
+  height: 151px;
+  position: relative;
+  left: 10%;
+  margin-bottom: 10px;
+}
+
+.Favtext{
+  position: relative;
+  top: -150px;
+}
+
+.puesto1 {
+ position: relative;
+ left: 84.2%;
+}
+
+.puesto2 {
+ position: relative;
+ left: 84.2%;
+}
+.puesto3 {
+ position: relative;
+ left: 84.2%;
+}
+
+#UserAvatar {
+  border-width: 22px;
+  border-color: #108f8f;
+  position: relative;
+  left: 38%;
+}
+
+
+.ProfileCard {
+  width: 60%;
+  height: 300px;
+  position: relative;
+  top: -75px;
+  left: 21%;
+}
+
+.rate1 {
+  position: relative;
+  left: 90px;
+  top: -41px;
+}
+
+.review {
+  width: 60%;
+  position: relative;
+  left: 21%;
+  top: -20px;
+}
+
+ #userName {
+   width: 50%;
+border-bottom: solid;
+border-width: 2px;
+text-align: center;
+color: #004BC2;
 position: relative;
-top: 214px;
-left: 735px;
+top: 220px;
+left: 24%;
+font-size: 24px;
+font-weight: lighter;
+ }
+
+#tabButtonHome {
+  color: white;
+}
+
+#AvatarVender {
+  color: white;
+}
+
+#AddVendor{
+  color: white;
 }
 
 .btn-facebook.btn.btn-block.btn-social{
@@ -111,4 +185,37 @@ left: 735px;
   color:#fff;
   background-color:#3b5998;
   border-color:rgba(0,0,0,0.2)
+}
+
+.image{
+  position:relative;
+  height:100%;
+  }.name{
+  position: relative;
+}
+.category{
+  position: relative;
+  left: 25px;
+  bottom: 0px
+}
+.map{
+  position: relative;
+  left:456px;
+  bottom:72px;
+}
+.result-review{
+  position: relative;
+  right:770px;
+  top:210px;
+}
+.expenses{
+  position: relative;
+  top:145px;
+  left:410px;
+}
+.card{
+  border-bottom: solid black;
+  height: 250px;
+  border-top: solid black;
+  margin-bottom: 50px;
 }
