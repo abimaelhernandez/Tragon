@@ -26,6 +26,20 @@ export default class AddVendor extends Component {
     });
   }
 
+  newVendor = () => {
+    const {
+      name,
+      category,
+      location,
+    } = this.state;
+    this.props.submitVendor(name, category, location);
+    this.setState({
+      name: '',
+      category: '',
+      location: '',
+    });
+  }
+
   render() {
     return (
       <div>

@@ -32,7 +32,6 @@ export default class App extends Component {
           isAuthenticated: true,
           user: user,
         });
-        console.log(this.state.user);
       } else {
         this.setState({
           isAuthenticated: false,

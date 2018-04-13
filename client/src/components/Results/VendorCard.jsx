@@ -29,7 +29,7 @@ const VendorCard = (props) => (
              <Grid item lg={4} sm={4}>
                <Paper className="result-review">
                  <Typography variant="body2" component="h2" >
-                   {obj.review[0].body}
+                
                  </Typography>
                </Paper>
              </Grid>
