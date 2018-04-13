@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
+import {Redirect} from 'react-router-dom';
 import Button from 'material-ui/Button';
 
-export default class Searchbar extends Component {
+export default class SearchBar extends Component {
   state = {
     search: ''
   }
@@ -23,7 +24,7 @@ export default class Searchbar extends Component {
 
     return (
       <div>
-        <form className='SearchBar'>
+        <form className="SearchBar">
         <input
           onChange={this.updateSearch}
           className='FieldInput'
@@ -36,7 +37,8 @@ export default class Searchbar extends Component {
         type="submit"
         className="SearchButton"
         variant="raised"
-        color="primary"
+        style={{ color: "white", backgroundColor: "#108f8f"}}
+        onClick={this.newSearch}
         onClick={this.newSearch}>
         Search
       </Button>

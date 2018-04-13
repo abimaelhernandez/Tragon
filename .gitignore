@@ -12,6 +12,8 @@ node_modules
 
 ## API keys ##
 server/cloudinary.js
+env.js
+
 ## Mac OSX ##
 .DS_Store
 
@@ -30,3 +32,6 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+
+
+ client/dist/bundle.js.map

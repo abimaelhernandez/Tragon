@@ -1,38 +1,161 @@
 html {
-  background-image: url('../merced_food.jpg');
-    position: center center fixed;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-   background-repeat: no-repeat;
+  background-image: url('./cOME.jpg');
+  height: 110%;
+  width: 100%;
+  position: center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ background-repeat: no-repeat;
+ min-width: 1024px;
+ min-height: 100%;
 }
 
+#main-content{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  top: 15vh;
+}
+
+.center-content {
+  position: relative;
+  display: block;
+  line-height: normal;
+}
+
+.BackGroundWindow {
+  background-color: #94b8b8;
+  position: relative;
+  top: 130px;
+}
+
+#appBar{
+ background-color: #10108f;
+}
 
 .Log {
-   position: absolute;
-   left: 1100px;
+ position: absolute;
+ left: 1100px;
 }
 
 .SearchBar {
-  position: absolute;
-  top: 250px;
-  left: 200px;
-}
-
-.searchButton {
-  position: absolute;
-  top: 242px;
-  left: 710px;
+position: relative;
+top: 190px;
+left: 200px;
 }
 
 .Menu {
-  position: absolute;
-  top: 245px;
-  left: 850px;
+position: relative;
+top: 125px;
+left: 835px;
 }
 
-.field {
-  width: 500px;
-  height: 25px;
+.FieldInput {
+  border-radius: 5px;
+  border-width: 0px;
+width: 520px;
+height: 25px;
+}
+
+.SearchButton {
+  background-color: #1752c9;
+position: relative;
+top: 160px;
+left: 730px;
+}
+
+.ProfileCard{
+  position: relative;
+  top: 350px;ss
+}
+
+.rate1 {
+  position: relative;
+  left: 90px;
+  top: -41px;
+}
+
+.Fav{
+  width: 80%;
+  height: 151px;
+  position: relative;
+  left: 10%;
+  margin-bottom: 10px;
+}
+
+.Favtext{
+  position: relative;
+  top: -150px;
+}
+
+.puesto1 {
+ position: relative;
+ left: 84.2%;
+}
+
+.puesto2 {
+ position: relative;
+ left: 84.2%;
+}
+.puesto3 {
+ position: relative;
+ left: 84.2%;
+}
+
+#UserAvatar {
+  border-width: 22px;
+  border-color: #108f8f;
+  position: relative;
+  left: 38%;
+}
+
+
+.ProfileCard {
+  width: 60%;
+  height: 300px;
+  position: relative;
+  top: -75px;
+  left: 21%;
+}
+
+.rate1 {
+  position: relative;
+  left: 90px;
+  top: -41px;
+}
+
+.review {
+  width: 60%;
+  position: relative;
+  left: 21%;
+  top: -20px;
+}
+
+ #userName {
+   width: 50%;
+border-bottom: solid;
+border-width: 2px;
+text-align: center;
+color: #004BC2;
+position: relative;
+top: 220px;
+left: 24%;
+font-size: 24px;
+font-weight: lighter;
+ }
+
+#tabButtonHome {
+  color: white;
+}
+
+#AvatarVender {
+  color: white;
+}
+
+#AddVendor{
+  color: white;
 }

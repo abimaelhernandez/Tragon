@@ -8,7 +8,7 @@ class LocationMenu extends React.Component {
     anchorEl: null,
   };
 
-  handleClick = event => {
+  handleClick = (event) => {
     this.setState({ anchorEl: event.currentTarget });
   };
 
@@ -22,7 +22,7 @@ class LocationMenu extends React.Component {
     return (
       <div className='Menu'>
         <Button
-          style={{ backgroundColor:'white', }}
+          style={{ backgroundColor: "#108f8f", color: "white" }}
           aria-owns={anchorEl ? 'fade-menu' : null}
           aria-haspopup="true"
           onClick={this.handleClick}
@@ -37,7 +37,6 @@ class LocationMenu extends React.Component {
           transition={Fade}
         >
           <MenuItem onClick={this.handleClose}>Mexico, City</MenuItem>
-          <MenuItem onClick={this.handleClose}>Est. De Mexico</MenuItem>
           <MenuItem onClick={this.handleClose}>Colonia Tabacalera</MenuItem>
           <MenuItem onClick={this.handleClose}>Colonia del valle</MenuItem>
         </Menu>

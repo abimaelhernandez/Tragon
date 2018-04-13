@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema
 
 const userSchema = mongoose.Schema({
   name: String,
@@ -10,7 +11,7 @@ const vendorSchema = mongoose.Schema({
   category: String,
   location: {
     type:{type:String},
-    coordinates:[Number,Number],
+    coordinates:[Number,Number]
   },
   picture: String,
   expenses: Number,

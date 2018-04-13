@@ -1,31 +1,19 @@
 import React from 'react';
+import ProfilePage from '../components/home/ProfileComp.jsx';
 
-import CardExampleWithAvatar from '../components/profile/AvatarVender.jsx';
-
-
-export default class Profile extends React.Component {
+ class Profile extends React.Component {
   state = {
-    persons: data.data
+    person: []
   }
-
-
-
-  componentDidMount() {
-    axios.get(`/profile`)
-      .then(res => {
-        const persons = res.data;
-        this.setState({ persons });
-      })
-  }
-
 
 
   render() {
     return (
-
-      <ul>
-        <AvatarVender vendors={this.state.persons} />
-      </ul>
-    )
+      <div>
+      <ProfilePage />
+      </div>
+    );
   }
 }
+
+export default Profile;
