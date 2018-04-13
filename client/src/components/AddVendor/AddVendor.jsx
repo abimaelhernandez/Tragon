@@ -26,6 +26,15 @@ export default class AddVendor extends Component {
     });
   }
 
+  newVendor = () => {
+    this.props.submitVendor(this.state);
+    this.setState({
+      name: '',
+      category: '',
+      location: '',
+    });
+  }
+
   render() {
     return (
       <div>
@@ -34,17 +43,17 @@ export default class AddVendor extends Component {
             placeholder="Name"
             value={this.state.name}
             onChange={this.updateName}
-          />
+          /> <br />
           <input
             placeholder="Category"
             value={this.state.category}
             onChange={this.updateCategory}
-          />
+          /> <br />
           <input
             placeholder="Location"
             value={this.state.location}
             onChange={this.updateLocation}
-          />
+          /> <br />
           <Button
             label="Save"
             className="btn btn-default"
