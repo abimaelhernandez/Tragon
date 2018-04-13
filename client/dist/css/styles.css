@@ -13,7 +13,7 @@ html {
 }
 /*this is where css for card of results starts*/
 .name{
-  position:relative;
+  position: relative;
 
 }
 .category{
@@ -22,18 +22,21 @@ html {
   bottom: 0px
 }
 .map{
-  position:relative;
-  left:800px
+  position: relative;
+  left:450px;
+  bottom:70px;
+  border-bottom: solid black;
+
 }
 .review{
   position: relative;
-  top:200px;
-
+  bottom:200px;
+  right:770px;
 }
 .expences{
   position: relative;
   top:165px;
-  left:500px;
+  left:410px;
 }
 .card{
   border-bottom: solid black;

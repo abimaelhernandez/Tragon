@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import ReactDOM  from 'react-dom'
-import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
-import { withStyles } from 'material-ui/styles';
-import Typography from 'material-ui/Typography';
 import MyGoogleMap from '../../components/Map/MapConfig.jsx'
+import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
+import Typography from 'material-ui/Typography';
+import { withStyles } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
 import Grid from 'material-ui/Grid';
 
@@ -22,6 +22,7 @@ export default class VendorCard extends Component{
 ///////// need to display name , expences , reviews
    // const local = this.props.vendors =>  points={local}/>
 ////////
+
    render(){
      return(
      <div>
@@ -41,19 +42,31 @@ export default class VendorCard extends Component{
                         </Paper>
                       </Grid>
                       <Grid item xs={8} sm={4}>
-                        <Paper className='category'>
-                          <Typography variant='headline' component='h2'>
+                        <Paper className={'category'}>
+                          <Typography gutterBottom variant='headline' component='h2'>
                             {obj.category}
                           </Typography>
                         </Paper>
                       </Grid>
-                        <Typography className='review'paragraph>
-                          {obj.review[0].body}
-                        </Typography>
-                        <Typography className='expences'>
-                          expenses level {obj.expenses}
-                        </Typography>
-                      <MyGoogleMap loc={obj.location} />
+                      <Grid item xs={8} sm={4}>
+                        <Paper className={'review'}>
+                          <Typography  variant='body 2' component='h2' >
+                            {obj.review[0].body}
+                          </Typography>
+                        </Paper>
+                      </Grid>
+                      <Grid item xs={8} sm={4}>
+                        <Paper className='expences'>
+                          <Typography gutterBottom component='h2'>
+                            expenses level {obj.expenses}
+                          </Typography>
+                        </Paper>
+                      </Grid>
+                      <Grid item xs={4} sm={3}>
+                          <Paper className='map'>
+                              <MyGoogleMap loc={obj.location} />
+                          </Paper>
+                      </Grid>
                     </Grid>
                     </CardContent>
                 </Card>
