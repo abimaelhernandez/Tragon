@@ -1,17 +1,17 @@
 import React from 'react';
 import Card, { CardContent, CardMedia } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
-import RatingStars from './RatingComp.jsx';
+import RatingStars from './RatingComp';
 
 const style ={
     width: 151,
     height: 151,
-
-}
+};
 
 const Favorites = () =>  (
   <div>
-  <div>
+    <h2 style={{color:'white'}}>My Favourite Places</h2>
+    <div>
        <Card className='Fav' style={{backgroundColor: "rgba(253,247,255, 0.8)"}} >
          <CardMedia  className='puesto1'
           image="../../../css/puesto3.jpg"
@@ -61,8 +61,8 @@ const Favorites = () =>  (
                   </Typography>
                 </CardContent>
              </Card>
-
            </div>
       </div>
-    );
+);
+
 export default Favorites;

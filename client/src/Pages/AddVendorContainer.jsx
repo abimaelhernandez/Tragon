@@ -1,36 +1,57 @@
 import React, {Component} from 'react';
 import AddVendor from '../components/AddVendor/AddVendor';
+import {GOOGLE_API} from '../../../env';
 
 export default class AddVendorContainer extends Component {
-  state = {
-    vendor: {
-      name: String,
-      category: String,
-      location: {
-        type: {type: String},
-        coordinates: [Number, Number],
-      },
-      picture: String,
-      expenses: Number,
-      review: [{
-        body: String,
-        ObjectId: String,
-      }],
-    },
+  componentDidMount() {
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API}`;
+    document.body.appendChild(script);
   }
 
-    submitVendor = () => {
-      axios.post('/AddVendor', {
-        Name: this.state.vendor.name,
-      });
-    }
+  geoCodeLocation = (address) => {
+    console.log('Fire geoCodeLocation');
+    const geocoder = new google.maps.Geocoder();
+    geocoder.geocode(
+      {
+        'address': `${address}`,
+        'region': 'MX'
+      },
+      (results, status) => {
+        if (status === google.maps.GeocoderStatus.OK && results.length > 0) {
+          const {location} = results[0].geometry;
+          return location;
+        }
+      }
+    );
+  }
 
-    render() {
-      return (
-        <div className="row">
-          <h2> Vendor Page</h2>
-          <AddVendor onSave={this.onSave} />
-        </div>
-      );
-    }
+  submitVendor = (name, category, location) => {
+    this.geoCodeLocation(location);
+    axios.post('/addvendor', {
+      name: `${name}`,
+      category: `${category}`,
+      location: {
+        type: 'Point',
+        coordinates: `${location}`,
+      },
+    })
+      .then((res) => {
+        console.log(`${res} success`);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+
+  render() {
+    return (
+      <div className="row">
+        <center>
+          <h2 style={{color: 'white'}}>Add a New Vendor</h2>
+          <AddVendor submitVendor={this.submitVendor} />
+        </center>
+      </div>
+    );
+  }
 }
