@@ -1,27 +1,28 @@
-const express = require("express");
-const bodyParser = require("body-parser");
+const express = require('express');
+const bodyParser = require('body-parser');
 const path = require('path');
-const route = require("./routes");
+const route = require('./routes');
 const mongoose = require('mongoose');
 const compression = require('compression');
-
 const mongo = require('../database/config');
+
 const app = express();
 
-//middleware
+// middleware
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static(__dirname + "/../client/dist"));
+app.use(express.static(`${__dirname}/../client/dist`));
 
-//HTTP Requests go here
-app.get('/search?:query', route.Search)
+// HTTP Requests go here
+app.get('/search?:query', route.Search);
 
-//post a review
+app.post('/addvendor', route.AddVendor);
+// post a review
 app.post('/reviews', route.postReview);
-//get reviews
+// get reviews
 app.get('/userReviews', route.getReviews);
-//get Locations
+// get Locations
 app.get('/location', route.getLocations);
 // get profile data
 app.get('/profile?:id', route.getProfile);
