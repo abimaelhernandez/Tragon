@@ -1,8 +1,5 @@
 const {Vendors} = require('../database/schema.js');
 
-const url = require('url');
-const path = require('path');
-
 // Search for vendors by category
 exports.Search = (req, res) => {
   const {query} = req.query;

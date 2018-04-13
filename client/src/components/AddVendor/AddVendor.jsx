@@ -56,6 +56,7 @@ export default class AddVendor extends Component {
             onChange={this.updateLocation}
           /> <br />
           <Button
+            type="submit"
             label="Save"
             className="btn btn-default"
             onClick={this.newVendor}

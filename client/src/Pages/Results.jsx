@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MyGoogleMap from '../components/Map/MapConfig';
 import VendorCard from '../components/Results/VendorCard';
 
 export default class Results extends Component {
@@ -19,19 +18,12 @@ export default class Results extends Component {
     });
   }
 
- componentWillUnmount(){
-   this.setState({
-     vendors: null
-   })
- }
-
- //const points =
- render() {
-   const local = this.props.vendors
-   return (
-     <div>
-       <VendorCard points={local} />
-     </div>
-   )
- }
+  render() {
+    const local = this.props.vendors;
+    return (
+      <div>
+        <VendorCard points={local} />
+      </div>
+    );
+  }
 }

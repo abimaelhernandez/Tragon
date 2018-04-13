@@ -1,14 +1,14 @@
 import React from 'react';
 import { compose, withProps } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
-import {GOOGLE_API} from '../../../../env.js';
+import {GOOGLE_API} from '../../../../env';
 
 // const googleMapKey = process.env.GOOGLE_API;
 // const googleMapPath = 'https://maps.googleapis.com/maps/api/js?key=';
 
 const MyGoogleMap = compose(
   withProps({
-    googleMapURL:`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API}&callback=initMap`,
+    googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API}`,
     loadingElement: <div style={{height: `100%`}} />,
     containerElement:<div  style={{height: `300px`, width:`300px`,bottom:'100px'}}/>,
     mapElement:<div style={{height:`100%`}}/>,
