@@ -5,12 +5,11 @@ export default class AddVendorContainer extends Component {
   state = {
   }
 
-  submitVendor = (name, category, location, expenses) => {
+  submitVendor = (name, category, location) => {
     axios.post('/addvendor', {
       name: `${name}`,
       category: `${category}`,
       location: `${location}`,
-      expenses: `${expenses}`,
     })
       .then((res) => {
         console.log(`${res} success`);

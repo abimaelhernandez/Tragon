@@ -30,7 +30,7 @@ export default class Results extends Component {
    const local = this.props.vendors
    return (
      <div>
-       <VendorCard points={local}/>
+       <VendorCard points={local} />
      </div>
    )
  }

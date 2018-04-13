@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const path = require('path');
 const route = require('./routes');
 const mongoose = require('mongoose');
 const compression = require('compression');
