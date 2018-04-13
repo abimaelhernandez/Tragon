@@ -19,12 +19,12 @@ app.get('/search?:query', route.Search);
 
 app.post('/addvendor', route.AddVendor);
 // post a review
-app.post('/reviews', route.postReview);
-// get reviews
-app.get('/userReviews', route.getReviews);
-// get Locations
-app.get('/location', route.getLocations);
-// get profile data
-app.get('/profile?:id', route.getProfile);
+// // app.post('/reviews', route.postReview);
+// // get reviews
+// app.get('/userReviews', route.getReviews);
+// // get Locations
+// app.get('/location', route.getLocations);
+// // get profile data
+// app.get('/profile?:id', route.getProfile);
 
 module.exports = app;
