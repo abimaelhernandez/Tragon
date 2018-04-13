@@ -61,7 +61,7 @@ export default class AddVendorContainer extends Component {
     return (
       <div className="row">
         <center>
-          <h2 style={{color: 'white'}}>Add a New Vendor</h2>
+          <h2 style={{color: 'grey'}}>Add a New Vendor</h2>
           <AddVendor submitVendor={this.submitVendor} />
         </center>
       </div>
