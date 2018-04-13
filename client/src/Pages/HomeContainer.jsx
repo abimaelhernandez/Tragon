@@ -1,32 +1,31 @@
 import React, {Component} from 'react';
-
-import Results from './Results.jsx';
-import Home from './HomePage.jsx'
+import Results from './Results';
+import Home from './HomePage';
 
 export default class HomeContainer extends Component {
   state = {
-    vendors: null
+    vendors: null,
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.vendors !== nextState.vendors;
   }
 
   submitSearch = (query) => {
     axios.get('/search', {
       params: {
-        query: `${query}`
-      }
+        query: `${query}`,
+      },
     })
-    .then(({data}) => {
-      this.setState({
-        vendors: data
+      .then(({data}) => {
+        this.setState({
+          vendors: data,
+        });
       })
-    })
-    .catch((error) => {
-      console.error(error);
-    })
-    this.props.history.push(`/search?query=${query}`)
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.state.vendors !== nextState.vendors
+      .catch((error) => {
+        console.error(error);
+      });
+    this.props.history.push(`/search?query=${query}`);
   }
 
   render() {

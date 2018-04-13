@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "App for collecting and displaying crowdsourced information about street food vendors",
   "main": "index.js",
+  "engines": {
+    "node": "8.11.x"
+  },
   "scripts": {
     "dev": "webpack --config webpack.config.js --watch --mode development",
     "dev-start": "nodemon server/index.js",
@@ -42,6 +45,7 @@
     "compression": "^1.7.2",
     "express": "^4.16.3",
     "firebase": "^4.12.1",
+    "firebase-admin": "^5.12.0",
     "material-ui": "^1.0.0-beta.38",
     "material-ui-search-bar": "^0.4.1",
     "mongoose": "^5.0.11",
@@ -51,6 +55,7 @@
     "react-dom": "^16.2.0",
     "react-google-maps": "^9.4.5",
     "react-router-dom": "^4.2.2",
-    "react-select": "^1.2.1"
+    "react-select": "^1.2.1",
+    "recompose": "^0.26.0"
   }
 }

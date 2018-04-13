@@ -1,4 +1,3 @@
-import firebase from 'firebase';
 import {ref, firebaseAuth, provider} from './client.js'
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
@@ -21,9 +20,7 @@ export default class Login extends Component {
       if (response.authResponse) {
         this.updateLoggedOutState()
       }
-    })
-
-    (function(d, s, id) {
+    })(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) {
         return;
@@ -39,19 +36,13 @@ export default class Login extends Component {
   handleFacebook = (e) => {
     e.preventDefault();
     firebaseAuth().signInWithPopup(provider)
-    .then((result) => {
+    .then(() => {
       this.setState({
         loggedIn: true
       })
     })
     .catch((error) => {
       console.error(error);
-    });
-  }
-
-  checkLoginState = () => {
-    FB.getLoginStatus((response) => {
-      statusChangeCallback(response);
     });
   }
 

@@ -1,7 +1,9 @@
-import React from "react"
-import {compose, withProps} from "recompose";
+import React from 'react';
+import { compose, withProps } from 'recompose';
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 import {GOOGLE_API} from '../../../../env.js';
-import {withScriptjs, withGoogleMap, GoogleMap, Marker,Infowindow} from "react-google-maps";
+
+// const googleMapKey = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API}`;
 
 const MyGoogleMap = compose(
   withProps({
@@ -25,4 +27,4 @@ const MyGoogleMap = compose(
 )
 
 export default MyGoogleMap;
-//resize to fit with the result page with vendor card
+// resize to fit with the result page with vendor card

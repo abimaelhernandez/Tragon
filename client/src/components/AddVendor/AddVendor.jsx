@@ -1,24 +1,59 @@
 import React, {Component} from 'react';
-import { Vendor } from '../../Pages/AddVendor';
+import Button from 'material-ui/Button';
 
-export default class AddVendor extends Component => {
-  return (
-    <form>
-      <h1>Manage member</h1>
+export default class AddVendor extends Component {
+  state = {
+    name: '',
+    category: '',
+    location: '',
+  }
 
-      <Input
-        name={props.vendor.name}
-        category={props.vendor.category}
-        location={props.vendor.location}
-        value={props.vendor}
-        onChange={props.onChange}
-      />
+  updateName = (e) => {
+    this.setState({
+      name: e.target.value,
+    });
+  }
 
-      <Button
-        label="Save"
-        className="btn btn-default"
-        onClick={props.onSave}
-      />
-    </form>
-  );
-};
+  updateCategory = (e) => {
+    this.setState({
+      category: e.target.value,
+    });
+  }
+
+  updateLocation = (e) => {
+    this.setState({
+      location: e.target.value,
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <form>
+          <input
+            placeholder="Name"
+            value={this.state.name}
+            onChange={this.updateName}
+          />
+          <input
+            placeholder="Category"
+            value={this.state.category}
+            onChange={this.updateCategory}
+          />
+          <input
+            placeholder="Location"
+            value={this.state.location}
+            onChange={this.updateLocation}
+          />
+          <Button
+            label="Save"
+            className="btn btn-default"
+            onClick={this.newVendor}
+          >
+          Add Vendor Info
+          </Button>
+        </form>
+      </div>
+    );
+  }
+}
