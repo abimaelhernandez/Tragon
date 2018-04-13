@@ -186,3 +186,36 @@ font-weight: lighter;
   background-color:#3b5998;
   border-color:rgba(0,0,0,0.2)
 }
+
+.image{
+  position:relative;
+  height:100%;
+  }.name{
+  position: relative;
+}
+.category{
+  position: relative;
+  left: 25px;
+  bottom: 0px
+}
+.map{
+  position: relative;
+  left:456px;
+  bottom:72px;
+}
+.result-review{
+  position: relative;
+  right:770px;
+  top:210px;
+}
+.expenses{
+  position: relative;
+  top:145px;
+  left:410px;
+}
+.card{
+  border-bottom: solid black;
+  height: 250px;
+  border-top: solid black;
+  margin-bottom: 50px;
+}
