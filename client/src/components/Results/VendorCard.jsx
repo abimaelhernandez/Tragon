@@ -6,10 +6,10 @@ import Grid from 'material-ui/Grid';
 import MyGoogleMap from '../../components/Map/MapConfig';
 
 const VendorCard = (props) => (
- <div>
+  <div>
    {props.points.map((obj) => {
      return (
-       <Card style={{backgroundColor: "rgba(253,247,255, 0.8)"}}className="card" key={obj._id}>
+       <Card className="card" key={obj._id}>
          <CardContent>
            <Grid container spacing={24}>
              <Grid item xs={8} sm={4}>
@@ -27,9 +27,9 @@ const VendorCard = (props) => (
                </Paper>
              </Grid>
              <Grid item lg={4} sm={4}>
-               <Paper className="review">
+               <Paper className="result-review">
                  <Typography variant="body2" component="h2" >
-                   {obj.review[0].body}
+
                  </Typography>
                </Paper>
              </Grid>

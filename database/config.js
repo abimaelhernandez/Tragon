@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 
-// const MongoClient = require('mongodb').MongoClient;
-
 // connection to heroku
 // const uri = process.env.MONGODB_URI;
 

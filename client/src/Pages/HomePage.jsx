@@ -1,6 +1,6 @@
 import React from 'react';
-import SearchBar from '../components/Home/SearchBar.jsx';
-import LocationMenu from '../components/Home/LocationMenu.jsx';
+import SearchBar from '../components/Home/SearchBar';
+import LocationMenu from '../components/Home/LocationMenu';
 
 const Home = (props) => (
   <div>
