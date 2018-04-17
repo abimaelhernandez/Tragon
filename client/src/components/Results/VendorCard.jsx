@@ -9,7 +9,7 @@ const VendorCard = (props) => (
  <div>
    {props.points.map((obj) => {
      return (
-       <Card className="card" key={obj._id}>
+       <Card style={{backgroundColor: "rgba(253,247,255, 0.8)"}}className="card" key={obj._id}>
          <CardContent>
            <Grid container spacing={24}>
              <Grid item xs={8} sm={4}>
